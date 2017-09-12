@@ -18,6 +18,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp">
+
                 <TextView
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
@@ -33,7 +34,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
+
                 <TextView
                     android:id="@+id/text1"
                     android:layout_width="wrap_content"
@@ -44,7 +46,9 @@
                     android:layout_marginLeft="21dp"
                     android:layout_marginStart="21dp"
                     android:layout_marginTop="10dp"
-                    android:text="Reset Presupuesto" />
+                    android:text="Reset Presupuesto"
+                    android:textColor="#000" />
+
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
@@ -53,6 +57,7 @@
                     android:layout_marginRight="21dp"
                     android:layout_marginTop="43dp"
                     android:text="Restablece en cero el ingreso mensual y limpia los tipos de egresos del presupuesto" />
+
                 <Button
                     android:id="@+id/button"
                     android:layout_width="match_parent"
@@ -63,29 +68,30 @@
                     android:layout_alignStart="@+id/textView4"
                     android:layout_below="@+id/textView4"
                     android:layout_marginTop="10dp"
-                    android:text="Resetear"
                     android:background="@drawable/btnpulsable"
-                    android:textColor="@color/colorTexto"/>
+                    android:text="Reset"
+                    android:textColor="@color/colorTexto" />
             </RelativeLayout>
 
 
             <LinearLayout
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:gravity="center">
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@drawable/separador"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/separador" />
             </LinearLayout>
 
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
+
                 <TextView
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
@@ -93,10 +99,12 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginLeft="21dp"
-                    android:layout_marginStart="21dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Incluir Ingreso" />
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="18dp"
+                    android:text="Incluir Ingreso Mensuales"
+                    android:textColor="#000" />
+
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
@@ -105,7 +113,8 @@
                     android:layout_alignStart="@+id/textView7"
                     android:layout_below="@+id/textView7"
                     android:layout_marginTop="20dp"
-                    android:text="Reset Presupuesto:" />
+                    android:text="Monto:" />
+
                 <EditText
                     android:id="@+id/editText3"
                     android:layout_width="wrap_content"
@@ -113,11 +122,10 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_below="@+id/textView7"
-                    android:layout_marginRight="15dp"
-                    android:layout_toEndOf="@+id/textView6"
                     android:layout_toRightOf="@+id/textView6"
                     android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:inputType="number" />
+
                 <Button
                     android:id="@+id/btn_incluir_2"
                     android:layout_width="wrap_content"
@@ -129,28 +137,29 @@
                     android:layout_below="@+id/editText3"
                     android:layout_marginRight="18dp"
                     android:layout_marginTop="5dp"
-                    android:text="Incluir"
                     android:background="@drawable/btnpulsable"
-                    android:textColor="@color/colorTexto"/>
+                    android:text="Incluir"
+                    android:textColor="@color/colorTexto" />
             </RelativeLayout>
 
 
             <LinearLayout
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:gravity="center">
+
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="5dp"
-                    android:background="@drawable/separador"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/separador" />
             </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
+                android:layout_height="match_parent">
                 <TextView
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
@@ -161,59 +170,119 @@
                     android:layout_marginLeft="21dp"
                     android:layout_marginStart="21dp"
                     android:layout_marginTop="16dp"
-                    android:text="Incluir Categorías de Egresos" />
+                    android:text="Incluir Categorías de Egresos"
+                    android:textColor="#000" />
                 <TextView
-                    android:id="@+id/textView17"
+                    android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/textView8"
                     android:layout_alignStart="@+id/textView8"
-                    android:layout_below="@+id/textView8"
-                    android:layout_marginTop="24dp"
-                    android:text="Monto del egreso:" />
-
-                <EditText
-                    android:id="@+id/editText8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:layout_alignBaseline="@+id/textView17"
-                    android:layout_alignBottom="@+id/textView17"
-                    android:layout_toRightOf="@+id/textView18"
-                    android:layout_toEndOf="@+id/textView18" />
-                <TextView
-                    android:id="@+id/textView18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/textView17"
-                    android:layout_alignStart="@+id/textView17"
-                    android:layout_below="@+id/editText8"
-                    android:layout_marginTop="30dp"
+                    android:layout_centerVertical="true"
                     android:text="Categoría de egreso:" />
                 <Spinner
                     android:id="@+id/spinner2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/textView18"
-                    android:layout_toRightOf="@+id/textView18"
-                    android:layout_toEndOf="@+id/textView18"
-                    android:layout_marginRight="15dp"/>
-                <Button
-                    android:id="@+id/button3"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/textView15"
+                    android:layout_toEndOf="@+id/textView15" />
+                <TextView
+                    android:id="@+id/textView17"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:layout_alignLeft="@+id/textView18"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView15"
+                    android:layout_alignStart="@+id/textView15"
+                    android:layout_marginTop="105dp"
+                    android:text="Monto:" />
+                <EditText
+                    android:id="@+id/editText4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignStart="@+id/textView18"
-                    android:layout_below="@+id/textView18"
-                    android:layout_marginRight="18dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Incluir"
-                    android:background="@drawable/btnpulsable"
-                    android:textColor="@color/colorTexto"/>
+                    android:layout_marginTop="85dp"
+                    android:layout_toEndOf="@+id/textView15"
+                    android:layout_toRightOf="@+id/textView15"
+                    android:ems="10"
+                    android:inputType="number" />
             </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+                <Button
+                    android:id="@+id/btn_agregar_categoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btnpulsable"
+                    android:text="Agregar"
+                    android:textColor="@color/colorTexto" />
+                <Button
+                    android:id="@+id/btn_eliminar_categoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btnpulsable"
+                    android:text="Eliminar"
+                    android:textColor="@color/colorTexto" />
+                <Button
+                    android:id="@+id/btn_modificar_categoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btnpulsable"
+                    android:text="Modificar"
+                    android:textColor="@color/colorTexto" />
+            </LinearLayout>
+
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/listaCategoriaEgresos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borde_celda">
+
+                <TableRow
+                    android:id="@+id/cabeceraListaPresupuestoMensual"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Egreso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_celda"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Egreso"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/Monto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_celda"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Monto"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="17sp" />
+                </TableRow>
+            </TableLayout>
+
 
         </LinearLayout>
     </ScrollView>

@@ -106,9 +106,6 @@ public class Navegacion extends AppCompatActivity
         if (id == R.id.edición_categoría_egreso) {
             fragment = new Categoria_egreso();
             fragment_seleccionado=true;
-
-            /*FUNCIONA  Intent intent = new Intent(Navegacion.this, Main2Activity.class);
-            startActivity(intent);*/
         }
         else if (id == R.id.detalle_presupuesto_mensual) {
             fragment = new Presupuesto_mensual();
