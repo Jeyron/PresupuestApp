@@ -5,7 +5,6 @@
     tools:context="com.example.jeiro.presupuestapp.Categoria_egreso">
 
     <!-- TODO: Update blank fragment layout -->
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -18,7 +17,6 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp">
-
                 <TextView
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
@@ -31,102 +29,97 @@
                     android:textStyle="bold" />
             </RelativeLayout>
 
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="260dp">
-
+                android:layout_height="match_parent">
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/lbl_identificador"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginLeft="14dp"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="37dp"
                     android:text="Identificador:" />
-
                 <EditText
                     android:id="@+id/txt_identificador"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/textView10"
-                    android:layout_alignBottom="@+id/textView10"
-                    android:layout_toEndOf="@+id/textView10"
-                    android:layout_toRightOf="@+id/textView10"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="17dp"
+                    android:layout_toEndOf="@+id/lbl_identificador"
+                    android:layout_toRightOf="@+id/lbl_identificador"
                     android:ems="10"
                     android:inputType="textPersonName" />
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/textView10"
-                    android:layout_alignStart="@+id/textView10"
-                    android:layout_below="@+id/txt_identificador"
-                    android:layout_marginTop="33dp"
-                    android:text="Egreso:" />
-
-                <EditText
-                    android:id="@+id/txt_egresos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/textView11"
-                    android:layout_alignBottom="@+id/textView11"
-                    android:layout_alignLeft="@+id/txt_identificador"
-                    android:layout_alignStart="@+id/txt_identificador"
-                    android:ems="10"
-                    android:inputType="textPersonName" />
-
                 <TextView
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/textView11"
-                    android:layout_alignStart="@+id/textView11"
-                    android:layout_below="@+id/txt_egresos"
-                    android:layout_marginTop="26dp"
-                    android:text="Tipo" />
-
+                    android:layout_alignLeft="@+id/lbl_identificador"
+                    android:layout_alignStart="@+id/lbl_identificador"
+                    android:layout_below="@+id/txt_identificador"
+                    android:layout_marginTop="28dp"
+                    android:text="Tipo:" />
                 <Spinner
-                    android:id="@+id/tipo_egreso"
-                    android:layout_width="210dp"
+                    android:id="@+id/spinner_tipo_categoria"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/txt_egresos"
-                    android:layout_alignStart="@+id/txt_egresos"
+                    android:layout_alignLeft="@+id/txt_identificador"
+                    android:layout_alignStart="@+id/txt_identificador"
                     android:layout_alignTop="@+id/textView12"
-                    android:entries="@array/tipo_Tarjeta" />
-
+                    android:entries="@array/categoria" />
                 <TextView
                     android:id="@+id/textView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/textView12"
                     android:layout_alignStart="@+id/textView12"
-                    android:layout_below="@+id/textView12"
-                    android:layout_marginTop="30dp"
-                    android:text="Descripción:" />
-
+                    android:layout_below="@+id/spinner_tipo_categoria"
+                    android:layout_marginTop="44dp"
+                    android:text="Egreso:" />
                 <EditText
-                    android:id="@+id/editText7"
-                    android:layout_width="200dp"
+                    android:id="@+id/editText5"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/tipo_egreso"
+                    android:layout_alignLeft="@+id/spinner_tipo_categoria"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignStart="@+id/spinner_tipo_categoria"
+                    android:layout_marginTop="135dp"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/textView13"
-                    android:layout_alignRight="@+id/tipo_egreso"
                     android:layout_alignStart="@+id/textView13"
-                    android:layout_below="@+id/textView13"
+                    android:layout_below="@+id/editText5"
+                    android:layout_marginTop="22dp"
+                    android:text="Descripción:" />
+                <EditText
+                    android:id="@+id/editText6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView14"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignStart="@+id/textView14"
+                    android:layout_marginTop="220dp"
                     android:ems="10"
                     android:inputType="textMultiLine" />
             </RelativeLayout>
 
             <LinearLayout
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingBottom="20dp"
-                android:orientation="horizontal">
-
+                android:orientation="horizontal"
+                android:paddingBottom="20dp">
                 <Button
                     android:id="@+id/btn_agregar_categoria"
                     android:layout_width="wrap_content"
@@ -136,7 +129,6 @@
                     android:background="@drawable/btnpulsable"
                     android:text="Agregar"
                     android:textColor="@color/colorTexto" />
-
                 <Button
                     android:id="@+id/btn_eliminar_categoria"
                     android:layout_width="wrap_content"
@@ -145,7 +137,6 @@
                     android:background="@drawable/btnpulsable"
                     android:text="Eliminar"
                     android:textColor="@color/colorTexto" />
-
                 <Button
                     android:id="@+id/btn_modificar_categoria"
                     android:layout_width="wrap_content"
@@ -156,7 +147,6 @@
                     android:background="@drawable/btnpulsable"
                     android:text="Modificar"
                     android:textColor="@color/colorTexto" />
-
             </LinearLayout>
 
 
@@ -164,68 +154,60 @@
                 android:id="@+id/listaCategoriaEgresos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/borde_celda" >
-
+                android:background="@drawable/borde_celda">
                 <TableRow
                     android:id="@+id/cabeceraListaCategoriaEgresos"
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent">
-
                     <TextView
                         android:id="@+id/columnaIdentificador"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/borde_celda"
                         android:layout_weight="1"
+                        android:background="@drawable/borde_celda"
                         android:gravity="center"
-                        android:padding="5px"
+                        android:padding="5dp"
                         android:text="Identificador"
                         android:textColor="@color/colorFondo"
-                        android:textSize="17dp" />
-
+                        android:textSize="17sp" />
                     <TextView
                         android:id="@+id/columnaEgreso"
-                        android:background="@drawable/borde_celda"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
+                        android:background="@drawable/borde_celda"
                         android:gravity="center"
-                        android:padding="5px"
+                        android:padding="5dp"
                         android:text="Egreso"
                         android:textColor="@color/colorFondo"
-                        android:textSize="17dp" />
-
+                        android:textSize="17sp" />
                     <TextView
                         android:id="@+id/columnaTipo"
-                        android:background="@drawable/borde_celda"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:background="@drawable/borde_celda"
                         android:gravity="center"
-                        android:padding="5px"
+                        android:padding="5dp"
                         android:text="Tipo"
                         android:textColor="@color/colorFondo"
-                        android:textSize="17dp" />
-
+                        android:textSize="17sp" />
                     <TextView
                         android:id="@+id/columnaDescripcion"
-                        android:background="@drawable/borde_celda"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:background="@drawable/borde_celda"
                         android:gravity="center"
-                        android:padding="5px"
+                        android:padding="5dp"
                         android:text="Descripcion"
                         android:textColor="@color/colorFondo"
-                        android:textSize="17dp" />
+                        android:textSize="17sp" />
                 </TableRow>
-
             </TableLayout>
 
 
         </LinearLayout>
-
     </ScrollView>
-
 </FrameLayout>
