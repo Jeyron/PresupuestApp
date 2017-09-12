@@ -1,0 +1,235 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jeiro.presupuestapp.Registro_egreso_mensual">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Registro de egreso mensual"
+                android:textColor="@color/colorFondo"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp">
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Fecha:" />
+
+                <EditText
+                    android:id="@+id/editText11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView27"
+                    android:layout_alignBottom="@+id/textView27"
+                    android:layout_alignLeft="@+id/editText17"
+                    android:layout_alignStart="@+id/editText17"
+                    android:layout_marginRight="18dp"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:text="Hora (opc):"
+                    android:layout_below="@+id/editText11"
+                    android:layout_alignLeft="@+id/textView27"
+                    android:layout_alignStart="@+id/textView27" />
+
+                <EditText
+                    android:id="@+id/editText12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView28"
+                    android:layout_alignBottom="@+id/textView28"
+                    android:layout_alignLeft="@+id/editText11"
+                    android:layout_alignStart="@+id/editText11"
+                    android:layout_marginRight="18dp"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:text="Categoría egreso:"
+                    android:layout_below="@+id/editText12"
+                    android:layout_alignLeft="@+id/textView28"
+                    android:layout_alignStart="@+id/textView28" />
+
+                <Spinner
+                    android:id="@+id/spinner6"
+                    android:layout_marginRight="18dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView29"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/textView29"
+                    android:layout_toEndOf="@+id/textView29" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="Local Comercial:"
+                    android:layout_below="@+id/textView29"
+                    android:layout_alignLeft="@+id/textView29"
+                    android:layout_alignStart="@+id/textView29" />
+
+                <EditText
+                    android:id="@+id/editText14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView30"
+                    android:layout_alignBottom="@+id/textView30"
+                    android:layout_marginRight="18dp"
+                    android:layout_toEndOf="@+id/textView29"
+                    android:layout_toRightOf="@+id/textView29"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:text="Descripción:"
+                    android:layout_below="@+id/editText14"
+                    android:layout_alignLeft="@+id/textView30"
+                    android:layout_alignStart="@+id/textView30" />
+
+                <EditText
+                    android:id="@+id/editText15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginRight="18dp"
+                    android:inputType="textMultiLine"
+                    android:layout_alignBaseline="@+id/textView31"
+                    android:layout_alignBottom="@+id/textView31"
+                    android:layout_alignLeft="@+id/editText14"
+                    android:layout_alignStart="@+id/editText14" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="Método de pago:"
+                    android:layout_below="@+id/editText15"
+                    android:layout_alignLeft="@+id/textView31"
+                    android:layout_alignStart="@+id/textView31" />
+
+                <Spinner
+                    android:id="@+id/spinner7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView32"
+                    android:layout_alignEnd="@+id/editText15"
+                    android:layout_alignRight="@+id/editText15"
+                    android:layout_alignLeft="@+id/editText14"
+                    android:layout_alignStart="@+id/editText14" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView32"
+                    android:layout_alignStart="@+id/textView32"
+                    android:layout_below="@+id/textView32"
+                    android:layout_marginTop="28dp"
+                    android:text="Monto:" />
+
+                <EditText
+                    android:id="@+id/editText16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:layout_alignBaseline="@+id/textView33"
+                    android:layout_alignBottom="@+id/textView33"
+                    android:layout_alignRight="@+id/spinner7"
+                    android:layout_alignEnd="@+id/spinner7"
+                    android:layout_alignLeft="@+id/spinner7"
+                    android:layout_alignStart="@+id/spinner7" />
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="29dp"
+                    android:text="# Factura (opc):"
+                    android:layout_below="@+id/editText16"
+                    android:layout_alignLeft="@+id/textView33"
+                    android:layout_alignStart="@+id/textView33" />
+
+                <EditText
+                    android:id="@+id/editText17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginRight="18dp"
+                    android:inputType="number"
+                    android:layout_alignBaseline="@+id/textView34"
+                    android:layout_alignBottom="@+id/textView34"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignLeft="@+id/editText16"
+                    android:layout_alignStart="@+id/editText16" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Registrar"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/editText17"
+                    android:layout_alignLeft="@+id/textView34"
+                    android:layout_alignStart="@+id/textView34"
+                    android:layout_alignRight="@+id/editText17"
+                    android:layout_alignEnd="@+id/editText17"
+                    android:background="@drawable/btnpulsable"
+                    android:textColor="@color/colorTexto"/>
+
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

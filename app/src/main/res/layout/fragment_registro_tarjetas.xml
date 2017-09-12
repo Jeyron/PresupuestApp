@@ -1,0 +1,181 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jeiro.presupuestapp.Registro_tarjetas">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Registro Tarjetas"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Marca:" />
+
+                <EditText
+                    android:id="@+id/txt_identificador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView10"
+                    android:layout_alignBottom="@+id/textView10"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toEndOf="@+id/textView11"
+                    android:layout_toRightOf="@+id/textView11"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView10"
+                    android:layout_alignStart="@+id/textView10"
+                    android:layout_below="@+id/txt_identificador"
+                    android:layout_marginTop="30dp"
+                    android:text="Entidad Financiera" />
+
+                <EditText
+                    android:id="@+id/txt_egresos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView11"
+                    android:layout_alignBottom="@+id/textView11"
+                    android:layout_alignEnd="@+id/txt_identificador"
+                    android:layout_alignRight="@+id/txt_identificador"
+                    android:layout_toEndOf="@+id/textView11"
+                    android:layout_toRightOf="@+id/textView11"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView11"
+                    android:layout_alignStart="@+id/textView11"
+                    android:layout_below="@+id/txt_egresos"
+                    android:layout_marginTop="25dp"
+                    android:text="Tipo:" />
+
+                <Spinner
+                    android:id="@+id/spinner5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView"
+                    android:layout_alignEnd="@+id/txt_egresos"
+                    android:layout_alignLeft="@+id/txt_egresos"
+                    android:layout_alignRight="@+id/txt_egresos"
+                    android:layout_alignStart="@+id/txt_egresos" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView"
+                    android:layout_alignStart="@+id/textView"
+                    android:layout_below="@+id/textView"
+                    android:layout_marginTop="30dp"
+                    android:text="Número:" />
+
+                <EditText
+                    android:id="@+id/editText10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView26"
+                    android:layout_alignBottom="@+id/textView26"
+                    android:layout_alignEnd="@+id/spinner5"
+                    android:layout_alignLeft="@+id/spinner5"
+                    android:layout_alignRight="@+id/spinner5"
+                    android:layout_alignStart="@+id/spinner5"
+                    android:ems="10"
+                    android:inputType="number" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_agregar_categoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btnpulsable"
+                    android:text="Agregar"
+                    android:textColor="@color/colorTexto" />
+
+                <Button
+                    android:id="@+id/btn_eliminar_categoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btnpulsable"
+                    android:text="Eliminar"
+                    android:textColor="@color/colorTexto" />
+
+                <Button
+                    android:id="@+id/btn_modificar_categoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="19dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btnpulsable"
+                    android:text="Modificar"
+                    android:textColor="@color/colorTexto" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

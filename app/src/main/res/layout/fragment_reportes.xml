@@ -1,0 +1,77 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jeiro.presupuestapp.Reportes">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Reportes"
+            android:textColor="@color/colorFondo"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Detalle de egresos"
+            android:background="@drawable/btnpulsable"
+            android:textColor="@color/colorTexto"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Balance por categoría de egreso"
+            android:background="@drawable/btnpulsable"
+            android:textColor="@color/colorTexto"/>
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Porcentajes de egresos por categoría"
+            android:background="@drawable/btnpulsable"
+            android:textColor="@color/colorTexto"/>
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/button1"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Resumen de gastos por tarjeta"
+            android:background="@drawable/btnpulsable"
+            android:textColor="@color/colorTexto"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">PresupuestApp</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="lleva_tu_control_monetario_de_forma_ordenada_y_clara">Lleva tu control monetario de forma ordenada y clara.</string>
+    <string name="te_damos_datos_para_que_ordenes_tus_ideas_financieras">Te damos datos para que ordenes tus ideas financieras</string>
+    <string name="verifica_tus_datos_monetarios_miediante_precisos_reportes">Verifica tus datos monetarios miediante precisos reportes.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_navegacion">Navegacion</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="Categoria">
+        <item>Ahorro</item>
+        <item>Gasto</item>
+    </string-array>
+
+    <string-array name="tipo_Tarjeta">
+        <item>Crédito</item>
+        <item>Débito</item>
+    </string-array>
+
+</resources>

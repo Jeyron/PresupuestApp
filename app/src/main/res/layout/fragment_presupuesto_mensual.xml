@@ -1,0 +1,221 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jeiro.presupuestapp.Presupuesto_mensual">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Detalle Presupuesto Mensual"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Reset Presupuesto" />
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginRight="21dp"
+                    android:layout_marginTop="43dp"
+                    android:text="Restablece en cero el ingreso mensual y limpia los tipos de egresos del presupuesto" />
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_alignEnd="@+id/textView4"
+                    android:layout_alignLeft="@+id/textView4"
+                    android:layout_alignRight="@+id/textView4"
+                    android:layout_alignStart="@+id/textView4"
+                    android:layout_below="@+id/textView4"
+                    android:layout_marginTop="10dp"
+                    android:text="Resetear"
+                    android:background="@drawable/btnpulsable"
+                    android:textColor="@color/colorTexto"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/separador"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Incluir Ingreso" />
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView7"
+                    android:layout_alignStart="@+id/textView7"
+                    android:layout_below="@+id/textView7"
+                    android:layout_marginTop="20dp"
+                    android:text="Reset Presupuesto:" />
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/textView7"
+                    android:layout_marginRight="15dp"
+                    android:layout_toEndOf="@+id/textView6"
+                    android:layout_toRightOf="@+id/textView6"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+                <Button
+                    android:id="@+id/btn_incluir_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/textView6"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignStart="@+id/textView6"
+                    android:layout_below="@+id/editText3"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Incluir"
+                    android:background="@drawable/btnpulsable"
+                    android:textColor="@color/colorTexto"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/separador"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Incluir Categorías de Egresos" />
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView8"
+                    android:layout_alignStart="@+id/textView8"
+                    android:layout_below="@+id/textView8"
+                    android:layout_marginTop="24dp"
+                    android:text="Monto del egreso:" />
+                <EditText
+                    android:id="@+id/editText8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/spinner2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignStart="@+id/spinner2"
+                    android:layout_below="@+id/textView8"
+                    android:layout_marginRight="15dp"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView17"
+                    android:layout_alignStart="@+id/textView17"
+                    android:layout_below="@+id/editText8"
+                    android:layout_marginTop="30dp"
+                    android:text="Categoría de egreso:" />
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textView18"
+                    android:layout_toRightOf="@+id/textView18"
+                    android:layout_toEndOf="@+id/textView18"
+                    android:layout_marginRight="15dp"/>
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/textView18"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignStart="@+id/textView18"
+                    android:layout_below="@+id/textView18"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Incluir"
+                    android:background="@drawable/btnpulsable"
+                    android:textColor="@color/colorTexto"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

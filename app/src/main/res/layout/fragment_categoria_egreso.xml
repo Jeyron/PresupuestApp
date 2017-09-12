@@ -1,0 +1,169 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jeiro.presupuestapp.Categoria_egreso">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Edición Categoría de egresos"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="260dp">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Identificador:" />
+
+                <EditText
+                    android:id="@+id/txt_identificador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView10"
+                    android:layout_alignBottom="@+id/textView10"
+                    android:layout_toEndOf="@+id/textView10"
+                    android:layout_toRightOf="@+id/textView10"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView10"
+                    android:layout_alignStart="@+id/textView10"
+                    android:layout_below="@+id/txt_identificador"
+                    android:layout_marginTop="33dp"
+                    android:text="Egreso:" />
+
+                <EditText
+                    android:id="@+id/txt_egresos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView11"
+                    android:layout_alignBottom="@+id/textView11"
+                    android:layout_alignLeft="@+id/txt_identificador"
+                    android:layout_alignStart="@+id/txt_identificador"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView11"
+                    android:layout_alignStart="@+id/textView11"
+                    android:layout_below="@+id/txt_egresos"
+                    android:layout_marginTop="26dp"
+                    android:text="Tipo" />
+
+                <Spinner
+                    android:id="@+id/tipo_egreso"
+                    android:layout_width="210dp"
+                    android:entries="@array/tipo_Tarjeta"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txt_egresos"
+                    android:layout_alignStart="@+id/txt_egresos"
+                    android:layout_alignTop="@+id/textView12" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView12"
+                    android:layout_alignStart="@+id/textView12"
+                    android:layout_below="@+id/textView12"
+                    android:layout_marginTop="30dp"
+                    android:text="Descripción:" />
+
+                <EditText
+                    android:id="@+id/editText7"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/tipo_egreso"
+                    android:layout_alignLeft="@+id/textView13"
+                    android:layout_alignRight="@+id/tipo_egreso"
+                    android:layout_alignStart="@+id/textView13"
+                    android:layout_below="@+id/textView13"
+                    android:ems="10"
+                    android:inputType="textMultiLine" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_agregar_categoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btnpulsable"
+                    android:text="Agregar"
+                    android:textColor="@color/colorTexto" />
+
+                <Button
+                    android:id="@+id/btn_eliminar_categoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btnpulsable"
+                    android:text="Eliminar"
+                    android:textColor="@color/colorTexto" />
+
+                <Button
+                    android:id="@+id/btn_modificar_categoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btnpulsable"
+                    android:text="Modificar"
+                    android:textColor="@color/colorTexto" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
