@@ -92,11 +92,11 @@
                 <Spinner
                     android:id="@+id/tipo_egreso"
                     android:layout_width="210dp"
-                    android:entries="@array/tipo_Tarjeta"
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/txt_egresos"
                     android:layout_alignStart="@+id/txt_egresos"
-                    android:layout_alignTop="@+id/textView12" />
+                    android:layout_alignTop="@+id/textView12"
+                    android:entries="@array/tipo_Tarjeta" />
 
                 <TextView
                     android:id="@+id/textView13"
@@ -124,6 +124,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:paddingBottom="20dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -158,9 +159,70 @@
 
             </LinearLayout>
 
-            <RelativeLayout
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/listaCategoriaEgresos"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="wrap_content"
+                android:background="@drawable/borde_celda" >
+
+                <TableRow
+                    android:id="@+id/cabeceraListaCategoriaEgresos"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/columnaIdentificador"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/borde_celda"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5px"
+                        android:text="Identificador"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/columnaEgreso"
+                        android:background="@drawable/borde_celda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5px"
+                        android:text="Egreso"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/columnaTipo"
+                        android:background="@drawable/borde_celda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5px"
+                        android:text="Tipo"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/columnaDescripcion"
+                        android:background="@drawable/borde_celda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5px"
+                        android:text="Descripcion"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="17dp" />
+                </TableRow>
+
+            </TableLayout>
+
 
         </LinearLayout>
 
