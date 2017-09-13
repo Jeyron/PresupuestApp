@@ -196,7 +196,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/borde_celda">
                 <TableRow
-                    android:id="@+id/cabeceraListaTaejetas"
+                    android:id="@+id/cabeceraListaTarjetas"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <TextView
@@ -211,7 +211,7 @@
                         android:textColor="@color/colorFondo"
                         android:textSize="17sp" />
                     <TextView
-                        android:id="@+id/Entidad_financiera"
+                        android:id="@+id/Entidad_financiera_tarjeta"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

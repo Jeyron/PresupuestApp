@@ -1,12 +1,14 @@
 package com.example.jeiro.presupuestapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -23,24 +25,16 @@ public class Reportes extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    Button detalle_egreso,balance_categoría_egreso,porcentajes_egresos_categoría,resumen_gastos_tarjeta;
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
     private OnFragmentInteractionListener mListener;
-
     public Reportes() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Reportes.
-     */
     // TODO: Rename and change types and number of parameters
     public static Reportes newInstance(String param1, String param2) {
         Reportes fragment = new Reportes();
@@ -59,6 +53,39 @@ public class Reportes extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
+    /**
+     * LLAMAR A UN ACTIVITY PARA EL PRIMER TIPO DE REPORTE
+     * */
+    public void llamar_detalle_egreso(){
+        Intent intent = new Intent(getActivity(),Reporte_detalle_egresos.class);
+        getActivity().startActivity(intent);
+    }
+
+    /**
+     * LLAMAR A UN ACTIVITY PARA EL SEGUNDO TIPO DE REPORTE
+     * */
+    public void llamar_balance_categoria_egreso(){
+        Intent intent = new Intent(getActivity(),Reporte_balance_categoria_egreso.class);
+        getActivity().startActivity(intent);
+    }
+
+    /**
+     * LLAMAR A UN ACTIVITY PARA EL TERCER TIPO DE REPORTE
+     * */
+    public void llamar_porcentaje_egresos_categoria(){
+        Intent intent = new Intent(getActivity(),Reporte_porcentaje_egresos_categoria.class);
+        getActivity().startActivity(intent);
+    }
+
+    /**
+     * LLAMAR A UN ACTIVITY PARA EL CUARTO TIPO DE REPORTE
+     * */
+    public void llamar_resumen_gasto_tarjeta(){
+        Intent intent = new Intent(getActivity(),Reporte_resumen_gastos_tarjeta.class);
+        getActivity().startActivity(intent);
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
