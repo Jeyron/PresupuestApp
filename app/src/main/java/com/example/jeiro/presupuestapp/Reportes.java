@@ -54,44 +54,9 @@ public class Reportes extends Fragment {
         }
     }
 
-    /**
-     * LLAMAR A UN ACTIVITY PARA EL PRIMER TIPO DE REPORTE
-     * */
-    public void llamar_detalle_egreso(){
-        Intent intent = new Intent(getActivity(),Reporte_detalle_egresos.class);
-        getActivity().startActivity(intent);
-    }
-
-    /**
-     * LLAMAR A UN ACTIVITY PARA EL SEGUNDO TIPO DE REPORTE
-     * */
-    public void llamar_balance_categoria_egreso(){
-        Intent intent = new Intent(getActivity(),Reporte_balance_categoria_egreso.class);
-        getActivity().startActivity(intent);
-    }
-
-    /**
-     * LLAMAR A UN ACTIVITY PARA EL TERCER TIPO DE REPORTE
-     * */
-    public void llamar_porcentaje_egresos_categoria(){
-        Intent intent = new Intent(getActivity(),Reporte_porcentaje_egresos_categoria.class);
-        getActivity().startActivity(intent);
-    }
-
-    /**
-     * LLAMAR A UN ACTIVITY PARA EL CUARTO TIPO DE REPORTE
-     * */
-    public void llamar_resumen_gasto_tarjeta(){
-        Intent intent = new Intent(getActivity(),Reporte_resumen_gastos_tarjeta.class);
-        getActivity().startActivity(intent);
-    }
-
-
     Context context;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_reportes,container,false);
         context = rootView.getContext();
 
@@ -130,26 +95,8 @@ public class Reportes extends Fragment {
                 startActivity(intent);
             }
         });
-
         return rootView;
     }
-
-    /*
-    public View Llamar_reporte(LayoutInflater inflater, ViewGroup container,
-                         Bundle savedInstanceState){
-        View rootView = inflater.inflate(R.layout.fragment_reportes,container,false);
-        context = rootView.getContext();
-
-        Button btn_reporte_detalle_egreos = (Button)rootView.findViewById(R.id.btn_reporte_detalle_egreos);
-        btn_reporte_detalle_egreos.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent = new Intent(context,Reporte_detalle_egresos.class);
-                startActivity(intent);
-            }
-        });
-        return rootView;
-    }*/
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
