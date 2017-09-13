@@ -31,7 +31,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:id="@+id/button5"
+            android:id="@+id/btn_reporte_detalle_egreos"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:text="Detalle de egresos"
@@ -39,7 +39,7 @@
             android:textColor="@color/colorTexto"/>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_reporte_balance_por_categoria"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="30dp"
@@ -50,7 +50,7 @@
             android:textColor="@color/colorTexto"/>
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btn_reporte_porcentaje_egreos_x_categoria"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="30dp"
@@ -63,7 +63,7 @@
         <Button
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:id="@+id/button1"
+            android:id="@+id/reporte_resumen_gastos_x_tarjeta"
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="35dp"

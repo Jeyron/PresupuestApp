@@ -48,14 +48,12 @@
                     android:id="@+id/txt_marca"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="17dp"
-                    android:focusable="false"
-                    android:layout_toEndOf="@+id/lbl_identificador"
-                    android:layout_toRightOf="@+id/lbl_identificador"
+                    android:enabled="false"
                     android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:layout_alignBottom="@+id/lbl_identificador"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
                 <TextView
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
@@ -83,7 +81,7 @@
                     android:layout_marginTop="44dp"
                     android:text="Egreso:" />
                 <EditText
-                    android:id="@+id/editText5"
+                    android:id="@+id/txt_egreso_nombre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/spinner_tipo_categoria"
@@ -99,11 +97,11 @@
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/textView13"
                     android:layout_alignStart="@+id/textView13"
-                    android:layout_below="@+id/editText5"
+                    android:layout_below="@+id/txt_egreso_nombre"
                     android:layout_marginTop="22dp"
                     android:text="Descripción:" />
                 <EditText
-                    android:id="@+id/editText6"
+                    android:id="@+id/txt_descripcion_categoria_egreso"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/textView14"

@@ -15,15 +15,18 @@
 
     <string name="action_settings">Settings</string>
 
+
     <string-array name="categoria">
         <item>Ahorro</item>
         <item>Gasto</item>
     </string-array>
 
+
     <string-array name="tipo_Tarjeta">
         <item>Crédito</item>
         <item>Débito</item>
     </string-array>
+
 
     <string-array name="metodo_pago">
         <item>Efectivo</item>
@@ -53,8 +56,6 @@
         <item>Santander</item>
         <item>HSBC</item>
         <item>BAC Credomatic</item>
-        <item>BNCR</item>
-        <item>BCR</item>
         <item>Davivienda</item>
         <item>American Express</item>
         <item>Scotiabank</item>

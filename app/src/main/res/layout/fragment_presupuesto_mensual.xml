@@ -1,5 +1,4 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -55,7 +54,7 @@
                     android:layout_marginTop="43dp"
                     android:text="Restablece en cero el ingreso mensual y limpia los tipos de egresos del presupuesto" />
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/btn_reset_presupuesto"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_alignEnd="@+id/textView4"
@@ -97,7 +96,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="18dp"
-                    android:text="Incluir Ingreso Mensuales"
+                    android:text="Incluir Ingreso Mensual"
                     android:textColor="#000" />
                 <TextView
                     android:id="@+id/textView6"
@@ -109,7 +108,7 @@
                     android:layout_marginTop="20dp"
                     android:text="Monto:" />
                 <EditText
-                    android:id="@+id/editText3"
+                    android:id="@+id/txt_monto_prespuesto_mensual"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -119,14 +118,14 @@
                     android:ems="10"
                     android:inputType="number" />
                 <Button
-                    android:id="@+id/btn_incluir_2"
+                    android:id="@+id/btn_incluir_ingreso_mensual"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:layout_alignLeft="@+id/textView6"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignStart="@+id/textView6"
-                    android:layout_below="@+id/editText3"
+                    android:layout_below="@+id/txt_monto_prespuesto_mensual"
                     android:layout_marginRight="18dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/btnpulsable"
@@ -172,7 +171,7 @@
                     android:layout_centerVertical="true"
                     android:text="Categoría de egreso:" />
                 <Spinner
-                    android:id="@+id/spinner2"
+                    android:id="@+id/spinner_presupuesto_mensual_categoria_egreso"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_centerVertical="true"
@@ -189,7 +188,7 @@
                     android:layout_marginTop="105dp"
                     android:text="Monto:" />
                 <EditText
-                    android:id="@+id/editText4"
+                    android:id="@+id/txt_monto_prespuesto_mensual_categoria_egreso"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"

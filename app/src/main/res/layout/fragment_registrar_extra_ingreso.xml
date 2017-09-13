@@ -57,7 +57,7 @@
                     android:text="Monto:" />
 
                 <EditText
-                    android:id="@+id/txt_monto_extra_ingreso"
+                    android:id="@+id/txt_monto_extra_ingreso_mensual"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -68,14 +68,14 @@
                     android:inputType="number" />
 
                 <Button
-                    android:id="@+id/btn_incluir_2"
+                    android:id="@+id/btn_incluir_ingreso_adicional"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:layout_alignLeft="@+id/textView6"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignStart="@+id/textView6"
-                    android:layout_below="@+id/txt_monto_extra_ingreso"
+                    android:layout_below="@+id/txt_monto_extra_ingreso_mensual"
                     android:layout_marginRight="18dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/btnpulsable"

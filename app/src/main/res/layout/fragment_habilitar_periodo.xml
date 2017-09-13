@@ -48,7 +48,7 @@
                 android:text="Mes:" />
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/spinner_habilitar_periodo_mes"
                 android:layout_width="230dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="95dp"
