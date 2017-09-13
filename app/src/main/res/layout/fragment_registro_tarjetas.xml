@@ -113,13 +113,14 @@
                     android:layout_alignStart="@+id/spinner_tipo_tarjeta"
                     android:layout_marginTop="150dp"
                     android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:weightSum="4">
 
                     <EditText
                         android:id="@+id/txt_numero_tarjeta_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="10"
+                        android:layout_weight="1"
                         android:inputType="number"
                         android:maxLength="4" />
 
@@ -128,6 +129,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="10"
+                        android:layout_weight="1"
                         android:inputType="number"
                         android:maxLength="4" />
 
@@ -136,6 +138,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="10"
+                        android:layout_weight="1"
                         android:inputType="number"
                         android:maxLength="4" />
 
@@ -144,6 +147,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="10"
+                        android:layout_weight="1"
                         android:inputType="number"
                         android:maxLength="4" />
                 </LinearLayout>
