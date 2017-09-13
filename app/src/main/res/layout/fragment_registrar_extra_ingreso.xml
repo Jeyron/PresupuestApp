@@ -23,7 +23,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:text="Registro Extraordinario de ingresos"
+                    android:text="@string/titulo_registro_Extraordinario_ingresos"
                     android:textColor="@color/colorFondo"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -43,7 +43,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="18dp"
-                    android:text="Incluir Ingreso Mensual"
+                    android:text="@string/incluir_ingreso_mes"
                     android:textColor="#000" />
 
                 <TextView
@@ -54,7 +54,7 @@
                     android:layout_alignStart="@+id/textView7"
                     android:layout_below="@+id/textView7"
                     android:layout_marginTop="20dp"
-                    android:text="Monto:" />
+                    android:text="@string/Monto" />
 
                 <EditText
                     android:id="@+id/txt_monto_extra_ingreso_mensual"
@@ -79,7 +79,7 @@
                     android:layout_marginRight="18dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/btnpulsable"
-                    android:text="Ingreso Adicional"
+                    android:text="@string/ingreso_Adicional"
                     android:textColor="@color/colorTexto" />
             </RelativeLayout>
 
@@ -106,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="19dp"
                     android:layout_marginStart="19dp"
-                    android:text="ESTADO ACTUAL:"
+                    android:text="@string/estado_Actual"
                     android:layout_marginTop="17dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true" />
@@ -151,7 +151,7 @@
                     android:layout_marginLeft="21dp"
                     android:layout_marginStart="21dp"
                     android:layout_marginTop="16dp"
-                    android:text="Incluir Categorías de Egresos"
+                    android:text="@string/incluir_Categorías_Egresos"
                     android:textColor="#000" />
                 <TextView
                     android:id="@+id/textView15"
@@ -160,7 +160,7 @@
                     android:layout_alignLeft="@+id/textView8"
                     android:layout_alignStart="@+id/textView8"
                     android:layout_centerVertical="true"
-                    android:text="Categoría de egreso:" />
+                    android:text="@string/categoría_egreso" />
 
                 <Spinner
                     android:id="@+id/spinner_extra_categoria_egresos"
@@ -178,7 +178,7 @@
                     android:layout_alignLeft="@+id/textView15"
                     android:layout_alignStart="@+id/textView15"
                     android:layout_marginTop="105dp"
-                    android:text="Monto:" />
+                    android:text="@string/Monto" />
                 <EditText
                     android:id="@+id/txt_extra_monto_categoria_egresos"
                     android:layout_width="wrap_content"
@@ -206,7 +206,7 @@
                     android:layout_marginLeft="18dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnpulsable"
-                    android:text="Agregar"
+                    android:text="@string/Agregar"
                     android:textColor="@color/colorTexto" />
                 <Button
                     android:id="@+id/btn_extra_eliminar_categoria"
@@ -214,7 +214,7 @@
                     android:layout_height="35dp"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/btnpulsable"
-                    android:text="Eliminar"
+                    android:text="@string/Eliminar"
                     android:textColor="@color/colorTexto" />
                 <Button
                     android:id="@+id/btn_extra_modificar_categoria"
@@ -224,7 +224,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnpulsable"
-                    android:text="Modificar"
+                    android:text="@string/Modificar"
                     android:textColor="@color/colorTexto" />
             </LinearLayout>
 
@@ -248,7 +248,7 @@
                     android:background="@drawable/borde_celda"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="Egreso"
+                    android:text="@string/tabla_Egreso"
                     android:textColor="@color/colorFondo"
                     android:textSize="17sp" />
                 <TextView
@@ -259,7 +259,7 @@
                     android:background="@drawable/borde_celda"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="Monto"
+                    android:text="@string/tabla_Monto"
                     android:textColor="@color/colorFondo"
                     android:textSize="17sp" />
             </TableRow>

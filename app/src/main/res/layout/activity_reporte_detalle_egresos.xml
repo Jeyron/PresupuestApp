@@ -1,9 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.jeiro.presupuestapp.Reporte_detalle_egresos">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/reporte_detalle_egresos"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/Seleccionar_Mes"
+                    android:textColor="#000" />
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text1"
+                    android:entries="@array/meses_periodo"
+                    android:layout_marginTop="14dp"
+                    android:layout_alignLeft="@+id/text1"
+                    android:layout_alignStart="@+id/text1" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/lbl_identificador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="37dp"
+                    android:text="@string/identificador" />
+                <EditText
+                    android:id="@+id/txt_reporte_identificador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/lbl_identificador"
+                    android:layout_alignStart="@+id/lbl_identificador"
+                    android:layout_below="@+id/txt_reporte_identificador"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/Tipo" />
+                <Spinner
+                    android:id="@+id/spinner_reporte_tipo_categoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txt_reporte_identificador"
+                    android:layout_alignStart="@+id/txt_reporte_identificador"
+                    android:layout_alignTop="@+id/textView12"
+                    android:entries="@array/categoria" />
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView12"
+                    android:layout_alignStart="@+id/textView12"
+                    android:layout_below="@+id/spinner_reporte_tipo_categoria"
+                    android:layout_marginTop="44dp"
+                    android:text="@string/Egreso" />
+                <EditText
+                    android:id="@+id/txt_reporte_egreso_nombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/spinner_reporte_tipo_categoria"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignStart="@+id/spinner_reporte_tipo_categoria"
+                    android:layout_marginTop="135dp"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView13"
+                    android:layout_alignStart="@+id/textView13"
+                    android:layout_below="@+id/txt_reporte_egreso_nombre"
+                    android:layout_marginTop="22dp"
+                    android:text="@string/Descripcion:" />
+                <EditText
+                    android:id="@+id/txt_reporte_descripcion_categoria_egreso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView14"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignStart="@+id/textView14"
+                    android:layout_marginTop="220dp"
+                    android:ems="10"
+                    android:inputType="textMultiLine" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp">
+                <Button
+                    android:id="@+id/btn_buscar_detalle_egreso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btnpulsable"
+                    android:text="@string/Buscar"
+                    android:textColor="@color/colorTexto" />
+                <Button
+                    android:id="@+id/btn_limpiar_entries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btnpulsable"
+                    android:text="@string/Limpiar"
+                    android:textColor="@color/colorTexto" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableLayout
+                    android:id="@+id/listaReporte_Detalle_Egresos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/borde_celda">
+
+                    <TableRow
+                        android:id="@+id/cabeceraListaReporte_Detalle_Egresos"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/columnaDetalleIdentificador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/borde_celda"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/tabla_identificador"
+                            android:textColor="@color/colorFondo"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/columnaDetalleEgreso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:background="@drawable/borde_celda"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/tabla_Egreso"
+                            android:textColor="@color/colorFondo"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/columnaDetalleTipo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/borde_celda"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/tabla_tipo"
+                            android:textColor="@color/colorFondo"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/columnaDetalleDescripción"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/borde_celda"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/tabla_Descripcion"
+                            android:textColor="@color/colorFondo"
+                            android:textSize="17sp" />
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

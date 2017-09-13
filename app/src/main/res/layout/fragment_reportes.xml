@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Reportes"
+            android:text="@string/reportes"
             android:textColor="@color/colorFondo"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -25,8 +25,6 @@
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
         android:orientation="vertical">
-
-
         <Button
             android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
@@ -34,10 +32,10 @@
             android:id="@+id/btn_reporte_detalle_egreos"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:text="Detalle de egresos"
+            android:onClick="llamar_detalle_egreso"
+            android:text="@string/reporte_detalle_egresos"
             android:background="@drawable/btnpulsable"
             android:textColor="@color/colorTexto"/>
-
         <Button
             android:id="@+id/btn_reporte_balance_por_categoria"
             android:layout_marginLeft="10dp"
@@ -45,10 +43,10 @@
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:text="Balance por categoría de egreso"
+            android:onClick="llamar_balance_categoria_egreso"
+            android:text="@string/reporte_Balance_categoría_egreso"
             android:background="@drawable/btnpulsable"
             android:textColor="@color/colorTexto"/>
-
         <Button
             android:id="@+id/btn_reporte_porcentaje_egreos_x_categoria"
             android:layout_marginLeft="10dp"
@@ -56,22 +54,21 @@
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:text="Porcentajes de egresos por categoría"
+            android:onClick="llamar_porcentaje_egresos_categoria"
+            android:text="@string/reporte_Porcentajes_egresos_categoría"
             android:background="@drawable/btnpulsable"
             android:textColor="@color/colorTexto"/>
-
         <Button
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:id="@+id/reporte_resumen_gastos_x_tarjeta"
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
+            android:onClick="llamar_resumen_gasto_tarjeta"
             android:layout_height="35dp"
-            android:text="Resumen de gastos por tarjeta"
+            android:text="@string/reporte_Resumen_gastos_tarjeta"
             android:background="@drawable/btnpulsable"
             android:textColor="@color/colorTexto"/>
-
     </LinearLayout>
-
 
 </FrameLayout>

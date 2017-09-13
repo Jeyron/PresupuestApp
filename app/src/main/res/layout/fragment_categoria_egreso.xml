@@ -24,12 +24,11 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:text="Edición Categoría de egresos"
+                    android:text="@string/titulo_edición_Categoría_egresos"
                     android:textColor="@color/colorFondo"
                     android:textSize="15sp"
                     android:textStyle="bold" />
             </RelativeLayout>
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -45,7 +44,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="37dp"
-                    android:text="Identificador:" />
+                    android:text="@string/identificador" />
 
                 <EditText
                     android:id="@+id/txt_identificador"
@@ -66,7 +65,7 @@
                     android:layout_alignStart="@+id/lbl_identificador"
                     android:layout_below="@+id/txt_identificador"
                     android:layout_marginTop="28dp"
-                    android:text="Tipo:" />
+                    android:text="@string/Tipo"/>
 
                 <Spinner
                     android:id="@+id/spinner_tipo_categoria"
@@ -85,7 +84,7 @@
                     android:layout_alignStart="@+id/textView12"
                     android:layout_below="@+id/spinner_tipo_categoria"
                     android:layout_marginTop="44dp"
-                    android:text="Egreso:" />
+                    android:text="@string/Egreso" />
 
                 <EditText
                     android:id="@+id/txt_egreso_nombre"
@@ -107,7 +106,7 @@
                     android:layout_alignStart="@+id/textView13"
                     android:layout_below="@+id/txt_egreso_nombre"
                     android:layout_marginTop="22dp"
-                    android:text="Descripción:" />
+                    android:text="@string/Descripcion" />
 
                 <EditText
                     android:id="@+id/txt_descripcion_categoria_egreso"
@@ -136,7 +135,7 @@
                     android:layout_marginLeft="18dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnpulsable"
-                    android:text="Agregar"
+                    android:text="@string/Agregar"
                     android:textColor="@color/colorTexto" />
 
                 <Button
@@ -145,7 +144,7 @@
                     android:layout_height="35dp"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/btnpulsable"
-                    android:text="Eliminar"
+                    android:text="@string/Eliminar"
                     android:textColor="@color/colorTexto" />
 
                 <Button
@@ -156,7 +155,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnpulsable"
-                    android:text="Modificar"
+                    android:text="@string/Modificar"
                     android:textColor="@color/colorTexto" />
             </LinearLayout>
 
@@ -180,7 +179,7 @@
                         android:background="@drawable/borde_celda"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="Identificador"
+                        android:text="@string/tabla_identificador"
                         android:textColor="@color/colorFondo"
                         android:textSize="17sp" />
 
@@ -193,7 +192,7 @@
                         android:background="@drawable/borde_celda"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="Egreso"
+                        android:text="@string/tabla_Egreso"
                         android:textColor="@color/colorFondo"
                         android:textSize="17sp" />
 
@@ -205,7 +204,7 @@
                         android:background="@drawable/borde_celda"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="Tipo"
+                        android:text="@string/tabla_Tipo"
                         android:textColor="@color/colorFondo"
                         android:textSize="17sp" />
 
@@ -217,7 +216,7 @@
                         android:background="@drawable/borde_celda"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="Descripcion"
+                        android:text="@string/tabla_Descripcion"
                         android:textColor="@color/colorFondo"
                         android:textSize="17sp" />
                 </TableRow>

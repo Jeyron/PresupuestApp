@@ -16,7 +16,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         btnSgte = (Button)findViewById(R.id.btn_inicio);
         btnSgte.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(MainActivity.this, Navegacion.class);

@@ -19,7 +19,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:text="Habilitar período"
+                android:text="@string/titulo_habilitar_período"
                 android:textColor="@color/colorFondo"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -36,7 +36,7 @@
                 android:layout_marginRight="21dp"
                 android:layout_marginTop="20dp"
                 android:textColor="#000"
-                android:text="Habilitar un período o mes para que se pueden registrar egresos" />
+                android:text="@string/parla2" />
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
                 android:layout_alignStart="@+id/button"
                 android:layout_below="@+id/textView4"
                 android:layout_marginTop="50dp"
-                android:text="Mes:" />
+                android:text="@string/Mes" />
 
             <Spinner
                 android:id="@+id/spinner_habilitar_periodo_mes"
@@ -66,7 +66,7 @@
                 android:layout_below="@+id/textView4"
                 android:layout_marginTop="100dp"
                 android:background="@drawable/btnpulsable"
-                android:text="Habilitar"
+                android:text="@string/Habilitar"
                 android:textColor="@color/colorTexto" />
         </RelativeLayout>
 
