@@ -17,6 +17,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp">
+
                 <TextView
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
@@ -33,6 +34,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <TextView
                     android:id="@+id/lbl_identificador"
                     android:layout_width="wrap_content"
@@ -44,33 +46,37 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="37dp"
                     android:text="Identificador:" />
+
                 <EditText
-                    android:id="@+id/txt_marca"
+                    android:id="@+id/txt_identificador"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:enabled="false"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:layout_alignBottom="@+id/lbl_identificador"
+                    android:layout_marginTop="18dp"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:ems="10"
+                    android:enabled="false"
+                    android:inputType="textPersonName" />
+
                 <TextView
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/lbl_identificador"
                     android:layout_alignStart="@+id/lbl_identificador"
-                    android:layout_below="@+id/txt_marca"
+                    android:layout_below="@+id/txt_identificador"
                     android:layout_marginTop="28dp"
                     android:text="Tipo:" />
+
                 <Spinner
                     android:id="@+id/spinner_tipo_categoria"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/txt_marca"
-                    android:layout_alignStart="@+id/txt_marca"
+                    android:layout_alignLeft="@+id/txt_identificador"
+                    android:layout_alignStart="@+id/txt_identificador"
                     android:layout_alignTop="@+id/textView12"
                     android:entries="@array/categoria" />
+
                 <TextView
                     android:id="@+id/textView13"
                     android:layout_width="wrap_content"
@@ -80,6 +86,7 @@
                     android:layout_below="@+id/spinner_tipo_categoria"
                     android:layout_marginTop="44dp"
                     android:text="Egreso:" />
+
                 <EditText
                     android:id="@+id/txt_egreso_nombre"
                     android:layout_width="wrap_content"
@@ -91,6 +98,7 @@
                     android:layout_marginTop="135dp"
                     android:ems="10"
                     android:inputType="textPersonName" />
+
                 <TextView
                     android:id="@+id/textView14"
                     android:layout_width="wrap_content"
@@ -100,6 +108,7 @@
                     android:layout_below="@+id/txt_egreso_nombre"
                     android:layout_marginTop="22dp"
                     android:text="Descripción:" />
+
                 <EditText
                     android:id="@+id/txt_descripcion_categoria_egreso"
                     android:layout_width="wrap_content"
@@ -114,11 +123,12 @@
             </RelativeLayout>
 
             <LinearLayout
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal"
                 android:paddingBottom="20dp">
+
                 <Button
                     android:id="@+id/btn_agregar_categoria"
                     android:layout_width="wrap_content"
@@ -128,6 +138,7 @@
                     android:background="@drawable/btnpulsable"
                     android:text="Agregar"
                     android:textColor="@color/colorTexto" />
+
                 <Button
                     android:id="@+id/btn_eliminar_categoria"
                     android:layout_width="wrap_content"
@@ -136,6 +147,7 @@
                     android:background="@drawable/btnpulsable"
                     android:text="Eliminar"
                     android:textColor="@color/colorTexto" />
+
                 <Button
                     android:id="@+id/btn_modificar_categoria"
                     android:layout_width="wrap_content"
@@ -154,10 +166,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/borde_celda">
+
                 <TableRow
                     android:id="@+id/cabeceraListaCategoriaEgresos"
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent">
+
                     <TextView
                         android:id="@+id/columnaIdentificador"
                         android:layout_width="wrap_content"
@@ -169,6 +183,7 @@
                         android:text="Identificador"
                         android:textColor="@color/colorFondo"
                         android:textSize="17sp" />
+
                     <TextView
                         android:id="@+id/columnaEgreso"
                         android:layout_width="wrap_content"
@@ -181,6 +196,7 @@
                         android:text="Egreso"
                         android:textColor="@color/colorFondo"
                         android:textSize="17sp" />
+
                     <TextView
                         android:id="@+id/columnaTipo"
                         android:layout_width="wrap_content"
@@ -192,6 +208,7 @@
                         android:text="Tipo"
                         android:textColor="@color/colorFondo"
                         android:textSize="17sp" />
+
                     <TextView
                         android:id="@+id/columnaDescripcion"
                         android:layout_width="wrap_content"
