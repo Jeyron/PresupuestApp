@@ -40,4 +40,19 @@
         <item>Diciembre</item>
     </string-array>
 
+    <string-array name="marca_tarjeta">
+        <item>Visa</item>
+        <item>MasterCard</item>
+        <item>Citi</item>
+        <item>Santander</item>
+        <item>HSBC</item>
+        <item>BAC Credomatic</item>
+        <item>BNCR</item>
+        <item>BCR</item>
+        <item>Davivienda</item>
+        <item>American Express</item>
+        <item>Scotiabank</item>
+        <item>Otros</item>
+    </string-array>
+
 </resources>

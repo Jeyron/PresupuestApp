@@ -18,7 +18,6 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp">
-
                 <TextView
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
@@ -29,13 +28,12 @@
                     android:textColor="@color/colorFondo"
                     android:textSize="15sp"
                     android:textStyle="bold" />
-
             </RelativeLayout>
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
@@ -45,67 +43,57 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="14dp"
                     android:layout_marginStart="14dp"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="15dp"
                     android:text="Marca:" />
-
-                <EditText
-                    android:id="@+id/txt_identificador"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/textView10"
-                    android:layout_alignBottom="@+id/textView10"
+                <Spinner
+                    android:id="@+id/txt_marca_tarjeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_toEndOf="@+id/textView11"
+                    android:layout_marginTop="10dp"
                     android:layout_toRightOf="@+id/textView11"
                     android:ems="10"
-                    android:inputType="textPersonName" />
-
+                    android:entries="@array/marca_tarjeta" />
                 <TextView
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/textView10"
                     android:layout_alignStart="@+id/textView10"
-                    android:layout_below="@+id/txt_identificador"
+                    android:layout_below="@+id/txt_marca_tarjeta"
                     android:layout_marginTop="30dp"
-                    android:text="Entidad Financiera" />
-
+                    android:text="Entidad Financiera:" />
                 <EditText
-                    android:id="@+id/txt_egresos"
+                    android:id="@+id/txt_entidad_financiera"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/textView11"
-                    android:layout_alignBottom="@+id/textView11"
-                    android:layout_alignEnd="@+id/txt_identificador"
-                    android:layout_alignRight="@+id/txt_identificador"
+                    android:layout_alignEnd="@+id/txt_marca_tarjeta"
+                    android:layout_alignRight="@+id/txt_marca_tarjeta"
+                    android:layout_marginTop="43dp"
                     android:layout_toEndOf="@+id/textView11"
                     android:layout_toRightOf="@+id/textView11"
                     android:ems="10"
                     android:inputType="textPersonName" />
-
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/textView11"
                     android:layout_alignStart="@+id/textView11"
-                    android:layout_below="@+id/txt_egresos"
+                    android:layout_below="@+id/txt_entidad_financiera"
                     android:layout_marginTop="25dp"
                     android:text="Tipo:" />
-
                 <Spinner
-                    android:id="@+id/spinner5"
+                    android:id="@+id/spinner_tipo_tarjeta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/textView"
-                    android:layout_alignEnd="@+id/txt_egresos"
-                    android:layout_alignLeft="@+id/txt_egresos"
-                    android:layout_alignRight="@+id/txt_egresos"
-                    android:layout_alignStart="@+id/txt_egresos" />
-
+                    android:layout_alignEnd="@+id/txt_entidad_financiera"
+                    android:layout_alignLeft="@+id/txt_entidad_financiera"
+                    android:layout_alignRight="@+id/txt_entidad_financiera"
+                    android:layout_alignStart="@+id/txt_entidad_financiera"
+                    android:entries="@array/tipo_Tarjeta" />
                 <TextView
                     android:id="@+id/textView26"
                     android:layout_width="wrap_content"
@@ -115,30 +103,26 @@
                     android:layout_below="@+id/textView"
                     android:layout_marginTop="30dp"
                     android:text="Número:" />
-
                 <EditText
-                    android:id="@+id/editText10"
+                    android:id="@+id/txt_numero_tarjeta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/textView26"
-                    android:layout_alignBottom="@+id/textView26"
-                    android:layout_alignEnd="@+id/spinner5"
-                    android:layout_alignLeft="@+id/spinner5"
-                    android:layout_alignRight="@+id/spinner5"
-                    android:layout_alignStart="@+id/spinner5"
+                    android:layout_alignEnd="@+id/spinner_tipo_tarjeta"
+                    android:layout_alignLeft="@+id/spinner_tipo_tarjeta"
+                    android:layout_alignRight="@+id/spinner_tipo_tarjeta"
+                    android:layout_alignStart="@+id/spinner_tipo_tarjeta"
+                    android:layout_marginTop="139dp"
                     android:ems="10"
                     android:inputType="number" />
-
             </RelativeLayout>
 
             <LinearLayout
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
-
                 <Button
-                    android:id="@+id/btn_agregar_categoria"
+                    android:id="@+id/btn_agregar_tarjeta"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:layout_marginLeft="15dp"
@@ -146,18 +130,16 @@
                     android:background="@drawable/btnpulsable"
                     android:text="Agregar"
                     android:textColor="@color/colorTexto" />
-
                 <Button
-                    android:id="@+id/btn_eliminar_categoria"
+                    android:id="@+id/btn_eliminar_tarjeta"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/btnpulsable"
                     android:text="Eliminar"
                     android:textColor="@color/colorTexto" />
-
                 <Button
-                    android:id="@+id/btn_modificar_categoria"
+                    android:id="@+id/btn_modificar_tarjeta"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:layout_marginLeft="10dp"
@@ -166,16 +148,66 @@
                     android:background="@drawable/btnpulsable"
                     android:text="Modificar"
                     android:textColor="@color/colorTexto" />
-
             </LinearLayout>
 
-            <RelativeLayout
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/listaCategoriaEgresos"
                 android:layout_width="match_parent"
-                android:layout_height="220dp">
-            </RelativeLayout>
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/borde_celda">
+                <TableRow
+                    android:id="@+id/cabeceraListaTaejetas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/Marca_tarjeta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_celda"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Marca"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/Entidad_financiera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_celda"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Entidad"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/Tipo_tarjeta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_celda"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Tipo"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/Numero_tarjeta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_celda"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Número"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="17sp" />
+                </TableRow>
+            </TableLayout>
 
         </LinearLayout>
-
     </ScrollView>
-
 </FrameLayout>

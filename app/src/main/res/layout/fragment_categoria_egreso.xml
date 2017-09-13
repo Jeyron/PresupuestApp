@@ -45,7 +45,7 @@
                     android:layout_marginTop="37dp"
                     android:text="Identificador:" />
                 <EditText
-                    android:id="@+id/txt_identificador"
+                    android:id="@+id/txt_marca"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -61,15 +61,15 @@
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/lbl_identificador"
                     android:layout_alignStart="@+id/lbl_identificador"
-                    android:layout_below="@+id/txt_identificador"
+                    android:layout_below="@+id/txt_marca"
                     android:layout_marginTop="28dp"
                     android:text="Tipo:" />
                 <Spinner
                     android:id="@+id/spinner_tipo_categoria"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/txt_identificador"
-                    android:layout_alignStart="@+id/txt_identificador"
+                    android:layout_alignLeft="@+id/txt_marca"
+                    android:layout_alignStart="@+id/txt_marca"
                     android:layout_alignTop="@+id/textView12"
                     android:entries="@array/categoria" />
                 <TextView

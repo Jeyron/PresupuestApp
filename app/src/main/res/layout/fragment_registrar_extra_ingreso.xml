@@ -57,7 +57,7 @@
                     android:text="Monto:" />
 
                 <EditText
-                    android:id="@+id/editText3"
+                    android:id="@+id/txt_monto_extra_ingreso"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -75,7 +75,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignStart="@+id/textView6"
-                    android:layout_below="@+id/editText3"
+                    android:layout_below="@+id/txt_monto_extra_ingreso"
                     android:layout_marginRight="18dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/btnpulsable"
@@ -107,13 +107,12 @@
                     android:layout_marginLeft="19dp"
                     android:layout_marginStart="19dp"
                     android:text="ESTADO ACTUAL:"
-                    android:layout_alignBaseline="@+id/editText"
-                    android:layout_alignBottom="@+id/editText"
+                    android:layout_marginTop="17dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true" />
 
                 <EditText
-                    android:id="@+id/editText"
+                    android:id="@+id/txt_mostrar_estado_actual_ingreso"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -161,15 +160,16 @@
                     android:layout_alignStart="@+id/textView8"
                     android:layout_centerVertical="true"
                     android:text="Categoría de egreso:" />
+
                 <Spinner
-                    android:id="@+id/spinner2"
+                    android:id="@+id/spinner_extra_categoria_egresos"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_toRightOf="@+id/textView15"
-                    android:layout_toEndOf="@+id/textView15" />
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/textView15"
+                    android:layout_toRightOf="@+id/textView15" />
                 <TextView
                     android:id="@+id/textView17"
                     android:layout_width="wrap_content"
@@ -179,7 +179,7 @@
                     android:layout_marginTop="105dp"
                     android:text="Monto:" />
                 <EditText
-                    android:id="@+id/editText4"
+                    android:id="@+id/txt_extra_monto_categoria_egresos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -199,7 +199,7 @@
                 android:orientation="horizontal"
                 android:paddingBottom="10dp">
                 <Button
-                    android:id="@+id/btn_agregar_categoria"
+                    android:id="@+id/btn_extra_agregar_categoria"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:layout_marginLeft="18dp"
@@ -208,7 +208,7 @@
                     android:text="Agregar"
                     android:textColor="@color/colorTexto" />
                 <Button
-                    android:id="@+id/btn_eliminar_categoria"
+                    android:id="@+id/btn_extra_eliminar_categoria"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:layout_marginLeft="10dp"
@@ -216,7 +216,7 @@
                     android:text="Eliminar"
                     android:textColor="@color/colorTexto" />
                 <Button
-                    android:id="@+id/btn_modificar_categoria"
+                    android:id="@+id/btn_extra_modificar_categoria"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:layout_marginLeft="10dp"
@@ -235,12 +235,12 @@
             android:background="@drawable/borde_celda">
 
             <TableRow
-                android:id="@+id/cabeceraListaPresupuestoMensual"
+                android:id="@+id/cabeceraListaExtra_Ingresos"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/Egreso"
+                    android:id="@+id/Egreso__extra_ingreso"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -251,7 +251,7 @@
                     android:textColor="@color/colorFondo"
                     android:textSize="17sp" />
                 <TextView
-                    android:id="@+id/Monto"
+                    android:id="@+id/Monto_extra_ingreso"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
