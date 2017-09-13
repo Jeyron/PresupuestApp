@@ -69,10 +69,12 @@ public class base_datos extends SQLiteOpenHelper
             "DROP TABLE IF EXISTS " + tablas_base_datos.tablaTarjeta.TABLE_NAME;
 
     public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "PresupuestApp.db";
+    public static final String DATABASE_NAME = "PresupuestApp";
+
     public base_datos(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
+
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_CATEGORIA);
         db.execSQL(SQL_CREATE_EGRESO);
