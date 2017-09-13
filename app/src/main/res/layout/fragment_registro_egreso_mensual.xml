@@ -230,6 +230,7 @@
                     android:layout_alignStart="@+id/textView34"
                     android:layout_below="@+id/txt_numero_factura_egreso_mensual"
                     android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
                     android:background="@drawable/btnpulsable"
                     android:text="Registrar"
                     android:textColor="@color/colorTexto" />
