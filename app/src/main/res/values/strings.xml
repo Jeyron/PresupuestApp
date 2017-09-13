@@ -172,5 +172,6 @@
     <string name="Porcentajegastado2">% Gastado</string>
     <string name="Seleccionar_tarjeta">% Seleccionar Tarjeta:</string>
     <string name="Egresos_cancelados">% Egresos Cancelados</string>
+    <string name="incluir_Ingreso_Mensual">Incluir Ingreso Mensual</string>
 
 </resources>

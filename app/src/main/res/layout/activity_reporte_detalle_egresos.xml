@@ -125,7 +125,7 @@
                     android:layout_alignStart="@+id/textView13"
                     android:layout_below="@+id/txt_reporte_egreso_nombre"
                     android:layout_marginTop="22dp"
-                    android:text="@string/Descripcion:" />
+                    android:text="@string/Descripcion" />
                 <EditText
                     android:id="@+id/txt_reporte_descripcion_categoria_egreso"
                     android:layout_width="wrap_content"
