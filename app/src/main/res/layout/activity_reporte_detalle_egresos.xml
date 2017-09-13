@@ -15,7 +15,24 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorFondo"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/app_name"
+                    android:textColor="#FFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
             <RelativeLayout
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="40dp">
                 <TextView
@@ -42,9 +59,8 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="15dp"
                     android:layout_marginStart="15dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/Seleccionar_Mes"
-                    android:textColor="#000" />
+                    android:layout_marginTop="15dp"
+                    android:text="@string/Seleccionar_Mes" />
                 <Spinner
                     android:id="@+id/spinner"
                     android:layout_width="match_parent"
@@ -141,7 +157,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal"
                 android:paddingBottom="20dp">
@@ -158,79 +174,75 @@
                     android:id="@+id/btn_limpiar_entries"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:layout_marginLeft="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnpulsable"
                     android:text="@string/Limpiar"
                     android:textColor="@color/colorTexto" />
             </LinearLayout>
 
-            <HorizontalScrollView
+            <TableLayout
+                android:id="@+id/listaReporte_Detalle_Egresos"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@drawable/borde_celda">
 
-                <TableLayout
-                    android:id="@+id/listaReporte_Detalle_Egresos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/borde_celda">
+                <TableRow
+                    android:id="@+id/cabeceraListaReporte_Detalle_Egresos"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent">
 
-                    <TableRow
-                        android:id="@+id/cabeceraListaReporte_Detalle_Egresos"
-                        android:layout_width="fill_parent"
-                        android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/columnaDetalleIdentificador"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_celda"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/tabla_identificador"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="17sp" />
 
-                        <TextView
-                            android:id="@+id/columnaDetalleIdentificador"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@drawable/borde_celda"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="@string/tabla_identificador"
-                            android:textColor="@color/colorFondo"
-                            android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/columnaDetalleEgreso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_celda"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/tabla_Egreso"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="17sp" />
 
-                        <TextView
-                            android:id="@+id/columnaDetalleEgreso"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="1"
-                            android:background="@drawable/borde_celda"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="@string/tabla_Egreso"
-                            android:textColor="@color/colorFondo"
-                            android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/columnaDetalleTipo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_celda"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/tabla_tipo"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="17sp" />
 
-                        <TextView
-                            android:id="@+id/columnaDetalleTipo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@drawable/borde_celda"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="@string/tabla_tipo"
-                            android:textColor="@color/colorFondo"
-                            android:textSize="17sp" />
-
-                        <TextView
-                            android:id="@+id/columnaDetalleDescripción"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@drawable/borde_celda"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="@string/tabla_Descripcion"
-                            android:textColor="@color/colorFondo"
-                            android:textSize="17sp" />
-                    </TableRow>
-                </TableLayout>
-            </HorizontalScrollView>
+                    <TextView
+                        android:id="@+id/columnaDetalleDescripción"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_celda"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/tabla_Descripcion"
+                        android:textColor="@color/colorFondo"
+                        android:textSize="17sp" />
+                </TableRow>
+            </TableLayout>
 
         </LinearLayout>
 
