@@ -159,11 +159,22 @@
                     android:id="@+id/spinner_metodo_pago_mensual"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:entries="@array/metodo_pago"
                     android:layout_alignBottom="@+id/textView32"
                     android:layout_alignEnd="@+id/txt_descripcion_egreso_mensual"
                     android:layout_alignRight="@+id/txt_descripcion_egreso_mensual"
                     android:layout_alignLeft="@+id/txt_descripcion_egreso_mensual"
                     android:layout_alignStart="@+id/txt_descripcion_egreso_mensual" />
+
+                <Spinner
+                    android:id="@+id/spinner3"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView32"
+                    android:clickable="false"
+                    android:layout_alignLeft="@+id/spinner_metodo_pago_mensual"
+                    android:layout_alignStart="@+id/spinner_metodo_pago_mensual" />
 
                 <TextView
                     android:id="@+id/textView33"
@@ -172,14 +183,14 @@
                     android:layout_alignLeft="@+id/textView32"
                     android:layout_alignStart="@+id/textView32"
                     android:layout_below="@+id/textView32"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="58dp"
                     android:text="Monto:" />
 
                 <EditText
                     android:id="@+id/txt_monto_egreos_mensual"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="275dp"
+                    android:layout_marginTop="305dp"
                     android:layout_alignEnd="@+id/spinner_metodo_pago_mensual"
                     android:layout_alignLeft="@+id/spinner_metodo_pago_mensual"
                     android:layout_alignRight="@+id/spinner_metodo_pago_mensual"
@@ -203,7 +214,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="number"
-                    android:layout_marginTop="325dp"
+                    android:layout_marginTop="355dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignLeft="@+id/txt_monto_egreos_mensual"
@@ -218,10 +229,11 @@
                     android:layout_alignRight="@+id/txt_numero_factura_egreso_mensual"
                     android:layout_alignStart="@+id/textView34"
                     android:layout_below="@+id/txt_numero_factura_egreso_mensual"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/btnpulsable"
                     android:text="Registrar"
                     android:textColor="@color/colorTexto" />
+
 
             </RelativeLayout>
         </ScrollView>
