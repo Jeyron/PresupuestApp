@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string-array name="metodo_pago">
+        <item>Cash</item>
+        <item>Card</item>
+    </string-array>
+
+    <string-array name="categoria">
+        <item>Saving</item>
+        <item>Spending</item>
+    </string-array>
+
+    <string-array name="meses_periodo">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>Dicember</item>
+    </string-array>
+
+    <string-array name="tipo_Tarjeta">
+        <item>Credit</item>
+        <item>Debit</item>
+    </string-array>
+
+    <string-array name="marca_tarjeta">
+        <item>Visa</item>
+        <item>MasterCard</item>
+        <item>Citi</item>
+        <item>Santander</item>
+        <item>HSBC</item>
+        <item>BAC Credomatic</item>
+        <item>American Express</item>
+        <item>Scotiabank</item>
+        <item>Otros</item>
+    </string-array>
+
     <string name="Comenzar">Launch</string>
     <string name="Registrar">Register</string>
     <string name="Derechos">All rights reserved</string>

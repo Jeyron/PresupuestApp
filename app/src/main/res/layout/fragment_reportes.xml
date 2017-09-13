@@ -5,88 +5,66 @@
     tools:context="com.example.jeiro.presupuestapp.Reportes">
 
     <!-- TODO: Update blank fragment layout -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp">
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/colorFondo"
+            android:layout_height="match_parent"
             android:orientation="vertical">
+
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/textView9"
+                android:gravity="center"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="@string/app_name"
-                android:textColor="#FFF"
-                android:textSize="20sp"
+                android:layout_marginTop="40dp"
+                android:text="@string/reportes"
+                android:textColor="@color/colorFondo"
+                android:textSize="15sp"
                 android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_reporte_detalle_egreos"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/btnpulsable"
+                android:onClick="Llamar_reporte"
+                android:text="@string/reporte_detalle_egresos"
+                android:textColor="@color/colorTexto" />
+
+            <Button
+                android:id="@+id/btn_reporte_balance_por_categoria"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/btnpulsable"
+                android:text="@string/reporte_Balance_categoría_egreso"
+                android:textColor="@color/colorTexto" />
+
+            <Button
+                android:id="@+id/btn_reporte_porcentaje_egreos_x_categoria"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/btnpulsable"
+                android:text="@string/reporte_Porcentajes_egresos_categoría"
+                android:textColor="@color/colorTexto" />
+
+            <Button
+                android:id="@+id/reporte_resumen_gastos_x_tarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/btnpulsable"
+                android:text="@string/reporte_Resumen_gastos_tarjeta"
+                android:textColor="@color/colorTexto" />
         </LinearLayout>
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView9"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:text="@string/reportes"
-            android:textColor="@color/colorFondo"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btn_reporte_detalle_egreos"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/btnpulsable"
-            android:onClick="Llamar_reporte"
-            android:text="@string/reporte_detalle_egresos"
-            android:textColor="@color/colorTexto" />
-
-        <Button
-            android:id="@+id/btn_reporte_balance_por_categoria"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/btnpulsable"
-            android:text="@string/reporte_Balance_categoría_egreso"
-            android:textColor="@color/colorTexto" />
-
-        <Button
-            android:id="@+id/btn_reporte_porcentaje_egreos_x_categoria"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/btnpulsable"
-            android:text="@string/reporte_Porcentajes_egresos_categoría"
-            android:textColor="@color/colorTexto" />
-
-        <Button
-            android:id="@+id/reporte_resumen_gastos_x_tarjeta"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/btnpulsable"
-            android:text="@string/reporte_Resumen_gastos_tarjeta"
-            android:textColor="@color/colorTexto" />
-    </LinearLayout>
 
 </FrameLayout>

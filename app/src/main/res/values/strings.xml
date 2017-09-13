@@ -60,8 +60,8 @@
         <item>Scotiabank</item>
         <item>Otros</item>
     </string-array>
-    <string name="title_activity_reporte_resumen_gastos_tarjeta">Reporte_resumen_gastos_tarjeta
-    </string>
+
+    <string name="title_activity_reporte_resumen_gastos_tarjeta">Reporte_resumen_gastos_tarjeta </string>
 
     <string name="Comenzar">Comenzar</string>
     <string name="Registrar">Registrar</string>

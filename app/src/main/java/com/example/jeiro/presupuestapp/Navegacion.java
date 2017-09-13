@@ -143,4 +143,12 @@ public class Navegacion extends AppCompatActivity
     public void onFragmentInteraction(Uri uri) {
 
     }
+
+    public void onAlertDialog(MenuItem item) {
+        AlertDialog alertDialog;
+        alertDialog= new AlertDialog.Builder(this).create();
+        alertDialog.setTitle("Acerca De");
+        alertDialog.setMessage("Este proyecto fue realizado por estudiantes del Instituto Tecnologico de Costa Rica");
+        alertDialog.show();
+    }
 }

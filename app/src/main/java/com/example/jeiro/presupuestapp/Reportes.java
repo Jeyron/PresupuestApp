@@ -59,7 +59,7 @@ public class Reportes extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_reportes,container,false);
         context = rootView.getContext();
-
+        /*llama a el reporte de ddetalles de los egresos*/
         Button btn_reporte_detalle_egreos = (Button)rootView.findViewById(R.id.btn_reporte_detalle_egreos);
         btn_reporte_detalle_egreos.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -68,7 +68,7 @@ public class Reportes extends Fragment {
                 startActivity(intent);
             }
         });
-
+        /*llama a el reporte de balance por categoria*/
         Button btn_llamar_balance_categoria_egreso = (Button)rootView.findViewById(R.id.btn_reporte_balance_por_categoria);
         btn_llamar_balance_categoria_egreso.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -77,7 +77,7 @@ public class Reportes extends Fragment {
                 startActivity(intent);
             }
         });
-
+        /*llama a el reporte de porcentaje de egreos x categoria*/
         Button btn_reporte_porcentaje_egreos_x_categoria = (Button)rootView.findViewById(R.id.btn_reporte_porcentaje_egreos_x_categoria);
         btn_reporte_porcentaje_egreos_x_categoria.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -87,6 +87,7 @@ public class Reportes extends Fragment {
             }
         });
 
+        /*llama a el reporte de resumen de gastos por tarjeta*/
         Button reporte_resumen_gastos_x_tarjeta = (Button)rootView.findViewById(R.id.reporte_resumen_gastos_x_tarjeta);
         reporte_resumen_gastos_x_tarjeta.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -97,6 +98,7 @@ public class Reportes extends Fragment {
         });
         return rootView;
     }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
