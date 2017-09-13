@@ -30,7 +30,6 @@ public class base_datos extends SQLiteOpenHelper
             "CREATE TABLE " +
                     tablas_base_datos.tablaMes.TABLE_NAME + " (" +
                     tablas_base_datos.tablaMes._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-                    tablas_base_datos.tablaMes.COLUMN_NAME_IDENTIFICADOR + NUMBER_TYPE + COMMA_SEP +
                     tablas_base_datos.tablaMes.COLUMN_NAME_NOMBRE + TEXT_TYPE + COMMA_SEP +
                     tablas_base_datos.tablaMes.COLUMN_NAME_INGRESO + NUMBER_TYPE + COMMA_SEP +
                     tablas_base_datos.tablaMes.COLUMN_NAME_ESTADO + TEXT_TYPE + " )";
@@ -47,7 +46,7 @@ public class base_datos extends SQLiteOpenHelper
                     tablas_base_datos.tablaEgreso.COLUMN_NAME_MONTO + NUMBER_TYPE + COMMA_SEP +
                     tablas_base_datos.tablaEgreso.COLUMN_NAME_DESCRIPCION + TEXT_TYPE + COMMA_SEP +
                     tablas_base_datos.tablaEgreso.COLUMN_NAME_FACTURA + NUMBER_TYPE + COMMA_SEP +
-                    tablas_base_datos.tablaEgreso.COLUMN_NAME_TARJETA + NUMBER_TYPE + " )";
+                    tablas_base_datos.tablaEgreso.COLUMN_NAME_TARJETA + TEXT_TYPE + " )";
 
     private static final String SQL_CREATE_TARJETA =
             "CREATE TABLE " +

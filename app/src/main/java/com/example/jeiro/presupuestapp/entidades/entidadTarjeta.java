@@ -9,9 +9,9 @@ public class entidadTarjeta
     private String marca;
     private String entidad;
     private String tipo;
-    private int    numero;
+    private String numero;
 
-    public entidadTarjeta (String marca, String entidad, String tipo, int numero)
+    public entidadTarjeta (String marca, String entidad, String tipo, String numero)
     {
         this.marca   = marca;
         this.entidad = entidad;
@@ -43,11 +43,11 @@ public class entidadTarjeta
         this.tipo = tipo;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 }
