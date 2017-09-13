@@ -11,6 +11,7 @@ public class entidadCategoria {
     private String egreso;
     private int    monto;
     private int    id_mes;
+    public  int    id;
 
     public entidadCategoria (String tipo, String descripcion, String egreso, int monto, int id_mes)
     {
