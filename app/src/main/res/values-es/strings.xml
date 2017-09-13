@@ -12,8 +12,8 @@
     <string name="registro_egreso_mensual">Registro de egreso mensual</string>
     <string name="acerca">Acerca De</string>
     <string name="reportes">Reportes</string>
-    <string name="Modificar">Modificar:</string>
-    <string name="Eliminar">Eliminar:</string>
+    <string name="Modificar">Modificar</string>
+    <string name="Eliminar">Eliminar</string>
     <string name="Agregar">Agregar</string>
 
     <string name="titulo_edición_Categoría_egresos">Edición Categoría de egresos</string>
@@ -58,7 +58,7 @@
     <string name="categoría_egreso">Categoría de egreso:</string>
 
     <string name="parla2">Habilitar un período o mes para que se pueden registrar egresos</string>
-    <string name="Habilitar">Habilitar:</string>
+    <string name="Habilitar">Habilitar</string>
     <string name="ingreso_Adicional">Ingreso Adicional</string>
     <string name="estado_Actual">ESTADO ACTUAL:</string>
 
@@ -72,9 +72,9 @@
 
     <string name="Fecha">Fecha:</string>
     <string name="Hora">Hora(opc):</string>
-    <string name="local_Comercial">Local Comercial::</string>
+    <string name="local_Comercial">Local Comercial:</string>
     <string name="Metodo_pago">Metodo de pago:</string>
-    <string name="factura"># Factura(opc)::</string>
+    <string name="factura"># Factura(opc):</string>
 
     <string name="Credito">Credito</string>
     <string name="Debito">Debito</string>
@@ -90,7 +90,7 @@
     <string name="Tarjeta">Tarjeta</string>
     <string name="Modalidad">Modalidad:</string>
 
-    <string name="reporte_detalle_egresos">Detalle_egresos</string>
+    <string name="reporte_detalle_egresos">Detalle egresos</string>
     <string name="reporte_Balance_categoría_egreso">Balance por categoría de egreso</string>
     <string name="reporte_Porcentajes_egresos_categoría">Porcentajes de egresos por categoría</string>
     <string name="reporte_Resumen_gastos_tarjeta">Resumen de gastos por tarjeta:</string>
@@ -108,4 +108,6 @@
     <string name="Porcentajegastado2">% Gastado</string>
     <string name="Seleccionar_tarjeta">% Seleccionar Tarjeta:</string>
     <string name="Egresos_cancelados">% Egresos Cancelados</string>
+
+    <string name="incluir_Ingreso_Mensual">Incluir Ingreso Mensual</string>
 </resources>

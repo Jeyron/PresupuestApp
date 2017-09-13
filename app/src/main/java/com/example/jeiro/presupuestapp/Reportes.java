@@ -87,12 +87,69 @@ public class Reportes extends Fragment {
     }
 
 
+    Context context;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_reportes, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_reportes,container,false);
+        context = rootView.getContext();
+
+        Button btn_reporte_detalle_egreos = (Button)rootView.findViewById(R.id.btn_reporte_detalle_egreos);
+        btn_reporte_detalle_egreos.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(context,Reporte_detalle_egresos.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_llamar_balance_categoria_egreso = (Button)rootView.findViewById(R.id.btn_reporte_balance_por_categoria);
+        btn_llamar_balance_categoria_egreso.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(context,Reporte_balance_categoria_egreso.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_reporte_porcentaje_egreos_x_categoria = (Button)rootView.findViewById(R.id.btn_reporte_porcentaje_egreos_x_categoria);
+        btn_reporte_porcentaje_egreos_x_categoria.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(context,Reporte_porcentaje_egresos_categoria.class);
+                startActivity(intent);
+            }
+        });
+
+        Button reporte_resumen_gastos_x_tarjeta = (Button)rootView.findViewById(R.id.reporte_resumen_gastos_x_tarjeta);
+        reporte_resumen_gastos_x_tarjeta.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(context,Reporte_resumen_gastos_tarjeta.class);
+                startActivity(intent);
+            }
+        });
+
+        return rootView;
     }
+
+    /*
+    public View Llamar_reporte(LayoutInflater inflater, ViewGroup container,
+                         Bundle savedInstanceState){
+        View rootView = inflater.inflate(R.layout.fragment_reportes,container,false);
+        context = rootView.getContext();
+
+        Button btn_reporte_detalle_egreos = (Button)rootView.findViewById(R.id.btn_reporte_detalle_egreos);
+        btn_reporte_detalle_egreos.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(context,Reporte_detalle_egresos.class);
+                startActivity(intent);
+            }
+        });
+        return rootView;
+    }*/
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
