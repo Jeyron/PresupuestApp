@@ -5,30 +5,30 @@
         <item
             android:id="@+id/edición_categoría_egreso"
             android:icon="@drawable/categoria_egreso"
-            android:title="Edición Categoría de egreso" />
+            android:title="@string/edición_Categoría_egreso"/>
         <item
             android:id="@+id/detalle_presupuesto_mensual"
             android:icon="@drawable/presupuesto_mensual"
-            android:title="Detalle presupuesto mensual" />
+            android:title="@string/detalle_presupuesto_mensual"/>
         <item
             android:id="@+id/habilitar_período"
             android:icon="@drawable/habilitar"
-            android:title="Habilitar período" />
+            android:title="@string/habilitar_período"/>
         <item
             android:id="@+id/registro_extr_ingreso"
             android:icon="@drawable/ingreso_extra"
-            android:title="Registro Extra de ingreso" />
+            android:title="@string/registro_Extra_ingreso"/>
         <item
             android:id="@+id/registro_tarjetas"
             android:icon="@drawable/tarjeta"
-            android:title="Registro Tarjetas" />
+            android:title="@string/registro_Tarjetas"/>
         <item
             android:id="@+id/registro_egreso_mensual"
             android:icon="@drawable/egreso_mensual"
-            android:title="Registro de egreso mensual" />
+            android:title="@string/registro_egreso_mensual" />
         <item
             android:id="@+id/reportes"
             android:icon="@drawable/reportes"
-            android:title="Reportes" />
+            android:title="@string/reportes" />
     </group>
 </menu>
