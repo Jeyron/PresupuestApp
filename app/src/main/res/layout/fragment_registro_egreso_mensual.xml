@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:text="Registro de egreso mensual"
+                android:text="@string/titulo_registro_egreso_mensual"
                 android:textColor="@color/colorFondo"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -47,7 +47,7 @@
                     android:layout_marginLeft="18dp"
                     android:layout_marginStart="18dp"
                     android:layout_marginTop="24dp"
-                    android:text="Fecha:" />
+                    android:text="@string/Fecha" />
 
                 <EditText
                     android:id="@+id/txt_fecha_egreso_mensual"
@@ -69,7 +69,7 @@
                     android:layout_alignStart="@+id/textView27"
                     android:layout_below="@+id/txt_fecha_egreso_mensual"
                     android:layout_marginTop="26dp"
-                    android:text="Hora (opc):" />
+                    android:text="@string/Hora" />
 
                 <EditText
                     android:id="@+id/txt_hora_egreso_mensual"
@@ -91,7 +91,7 @@
                     android:layout_alignStart="@+id/textView28"
                     android:layout_below="@+id/txt_hora_egreso_mensual"
                     android:layout_marginTop="21dp"
-                    android:text="Categoría egreso:" />
+                    android:text="@string/categoría_egreso" />
 
                 <Spinner
                     android:id="@+id/spinner_categoria_egreso_mensual"
@@ -110,7 +110,7 @@
                     android:layout_alignStart="@+id/textView29"
                     android:layout_below="@+id/textView29"
                     android:layout_marginTop="28dp"
-                    android:text="Local Comercial:" />
+                    android:text="@string/local_Comercial" />
 
                 <EditText
                     android:id="@+id/txt_local_comercial"
@@ -131,7 +131,7 @@
                     android:layout_alignStart="@+id/textView30"
                     android:layout_below="@+id/txt_local_comercial"
                     android:layout_marginTop="23dp"
-                    android:text="Descripción:" />
+                    android:text="@string/Descripcion" />
 
                 <EditText
                     android:id="@+id/txt_descripcion_egreso_mensual"
@@ -153,7 +153,7 @@
                     android:layout_alignStart="@+id/textView31"
                     android:layout_below="@+id/txt_descripcion_egreso_mensual"
                     android:layout_marginTop="18dp"
-                    android:text="Método de pago:" />
+                    android:text="@string/Metodo_pago" />
 
                 <Spinner
                     android:id="@+id/spinner_metodo_pago_mensual"
@@ -180,11 +180,10 @@
                     android:id="@+id/textView33"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/Monto"
+                    android:layout_above="@+id/textView34"
                     android:layout_alignLeft="@+id/textView32"
-                    android:layout_alignStart="@+id/textView32"
-                    android:layout_below="@+id/textView32"
-                    android:layout_marginTop="58dp"
-                    android:text="Monto:" />
+                    android:layout_alignStart="@+id/textView32" />
 
                 <EditText
                     android:id="@+id/txt_monto_egreos_mensual"
@@ -206,7 +205,7 @@
                     android:layout_alignStart="@+id/textView33"
                     android:layout_below="@+id/txt_monto_egreos_mensual"
                     android:layout_marginTop="29dp"
-                    android:text="# Factura (opc):" />
+                    android:text="@string/factura" />
 
                 <EditText
                     android:id="@+id/txt_numero_factura_egreso_mensual"
@@ -232,7 +231,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="15dp"
                     android:background="@drawable/btnpulsable"
-                    android:text="Registrar"
+                    android:text="@string/Registrar"
                     android:textColor="@color/colorTexto" />
 
 

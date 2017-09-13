@@ -14,13 +14,12 @@
         android:layout_marginTop="25dp"
         android:layout_marginLeft="20dp"
         app:srcCompat="@drawable/logo1" />
-
     <TextView
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
-        android:text="Menú Principal"
+        android:text="@string/menuPrincipal"
         android:textSize="20dp"
         android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />

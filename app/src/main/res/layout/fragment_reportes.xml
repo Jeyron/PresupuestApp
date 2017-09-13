@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Reportes"
+            android:text="@string/reportes"
             android:textColor="@color/colorFondo"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:onClick="llamar_detalle_egreso"
-            android:text="Detalle de egresos"
+            android:text="@string/reporte_detalle_egresos"
             android:background="@drawable/btnpulsable"
             android:textColor="@color/colorTexto"/>
         <Button
@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:onClick="llamar_balance_categoria_egreso"
-            android:text="Balance por categoría de egreso"
+            android:text="@string/reporte_Balance_categoría_egreso"
             android:background="@drawable/btnpulsable"
             android:textColor="@color/colorTexto"/>
         <Button
@@ -55,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:onClick="llamar_porcentaje_egresos_categoria"
-            android:text="Porcentajes de egresos por categoría"
+            android:text="@string/reporte_Porcentajes_egresos_categoría"
             android:background="@drawable/btnpulsable"
             android:textColor="@color/colorTexto"/>
         <Button
@@ -66,7 +66,7 @@
             android:layout_width="match_parent"
             android:onClick="llamar_resumen_gasto_tarjeta"
             android:layout_height="35dp"
-            android:text="Resumen de gastos por tarjeta"
+            android:text="@string/reporte_Resumen_gastos_tarjeta"
             android:background="@drawable/btnpulsable"
             android:textColor="@color/colorTexto"/>
     </LinearLayout>

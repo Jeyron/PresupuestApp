@@ -25,7 +25,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:text="Porcentaje egresos por categoria"
+                    android:text="@string/reporte_Balance_categoría_egreso"
                     android:textColor="@color/colorFondo"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -44,7 +44,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
-                    android:text="Seleccionar Mes:"
+                    android:text="@string/Seleccionar_Mes"
                     android:textColor="#000" />
                 <Spinner
                     android:id="@+id/spinner_ReportePorcentaje_EgresosCategoria"
@@ -76,7 +76,7 @@
                         android:background="@drawable/borde_celda"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="Categoría"
+                        android:text="@string/Categoria"
                         android:textColor="@color/colorFondo"
                         android:textSize="17sp" />
                     <TextView
@@ -88,7 +88,7 @@
                         android:background="@drawable/borde_celda"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="% Presupuestado"
+                        android:text="@string/Porcentajepresupuestado2"
                         android:textColor="@color/colorFondo"
                         android:textSize="17sp" />
                     <TextView
@@ -99,7 +99,7 @@
                         android:background="@drawable/borde_celda"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="% Gastado"
+                        android:text="@string/Porcentajegastado2"
                         android:textColor="@color/colorFondo"
                         android:textSize="17sp" />
                 </TableRow>
