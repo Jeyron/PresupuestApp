@@ -97,7 +97,7 @@
                     android:id="@+id/spinner_categoria_egreso_mensual"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/textView29"
+                    android:layout_marginTop="115dp"
                     android:layout_toRightOf="@+id/textView29"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true" />
@@ -160,7 +160,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:entries="@array/metodo_pago"
-                    android:layout_alignBottom="@+id/textView32"
+                    android:layout_marginTop="245dp"
                     android:layout_alignEnd="@+id/txt_descripcion_egreso_mensual"
                     android:layout_alignRight="@+id/txt_descripcion_egreso_mensual"
                     android:layout_alignLeft="@+id/txt_descripcion_egreso_mensual"
@@ -181,7 +181,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Monto"
-                    android:layout_above="@+id/textView34"
+                    android:layout_marginTop="335dp"
                     android:layout_alignLeft="@+id/textView32"
                     android:layout_alignStart="@+id/textView32" />
 
@@ -189,7 +189,7 @@
                     android:id="@+id/txt_monto_egreos_mensual"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="305dp"
+                    android:layout_marginTop="315dp"
                     android:layout_alignEnd="@+id/spinner_metodo_pago_mensual"
                     android:layout_alignLeft="@+id/spinner_metodo_pago_mensual"
                     android:layout_alignRight="@+id/spinner_metodo_pago_mensual"
@@ -204,7 +204,7 @@
                     android:layout_alignLeft="@+id/textView33"
                     android:layout_alignStart="@+id/textView33"
                     android:layout_below="@+id/txt_monto_egreos_mensual"
-                    android:layout_marginTop="29dp"
+                    android:layout_marginTop="32dp"
                     android:text="@string/factura" />
 
                 <EditText
@@ -213,11 +213,9 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="number"
-                    android:layout_marginTop="355dp"
+                    android:layout_alignBottom="@+id/textView34"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignLeft="@+id/txt_monto_egreos_mensual"
-                    android:layout_alignStart="@+id/txt_monto_egreos_mensual" />
+                    android:layout_alignParentEnd="true" />
 
                 <Button
                     android:id="@+id/button7"

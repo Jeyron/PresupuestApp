@@ -1,111 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Comenzar">Comenzar</string>
-    <string name="Registrar">Registrar</string>
-    <string name="Derechos">Todos los derechos reservados</string>
-    <string name="menuPrincipal">Menú Principal</string>
-    <string name="edición_Categoría_egreso">Edición Categoría de egreso</string>
-    <string name="detalle_presupuesto_mensual">Detalle presupuesto mensual</string>
-    <string name="habilitar_período">Habilitar período</string>
-    <string name="registro_Extra_ingreso">Registro Extra de ingreso</string>
-    <string name="registro_Tarjetas">Registro Tarjetas</string>
-    <string name="registro_egreso_mensual">Registro de egreso mensual</string>
-    <string name="acerca">Acerca De</string>
-    <string name="reportes">Reportes</string>
-    <string name="Modificar">Modificar:</string>
-    <string name="Eliminar">Eliminar:</string>
-    <string name="Agregar">Agregar</string>
+    <string name="Comenzar">Launch</string>
+    <string name="Registrar">Register</string>
+    <string name="Derechos">All rights reserved</string>
+    <string name="menuPrincipal">Main menu</string>
+    <string name="edición_Categoría_egreso">Edition Expenses Category</string>
+    <string name="detalle_presupuesto_mensual">Monthly budget detail</string>
+    <string name="habilitar_período">Enable period</string>
+    <string name="registro_Extra_ingreso">Extra Income Record</string>
+    <string name="registro_Tarjetas">Card Registration</string>
+    <string name="registro_egreso_mensual">Monthly Expenses Registration</string>
+    <string name="acerca">About</string>
+    <string name="reportes">Reports</string>
+    <string name="Modificar">Modify</string>
+    <string name="Eliminar">Remove</string>
+    <string name="Agregar">Add</string>
 
-    <string name="titulo_edición_Categoría_egresos">Edición Categoría de egresos</string>
-    <string name="titulo_detalle_Presupuesto_Mensual">Detalle Presupuesto Mensual</string>
-    <string name="titulo_habilitar_período">Habilitar período</string>
-    <string name="titulo_registro_Extraordinario_ingresos">Registro Extraordinario de ingresos</string>
-    <string name="titulo_registro_Tarjetas">Registro Tarjetas </string>
-    <string name="titulo_registro_egreso_mensual">Registro de egreso mensual</string>
+    <string name="titulo_edición_Categoría_egresos">Edition Expenses Category</string>
+    <string name="titulo_detalle_Presupuesto_Mensual">Monthly Budget Detail</string>
+    <string name="titulo_habilitar_período">Enable period</string>
+    <string name="titulo_registro_Extraordinario_ingresos">Extraordinary income record</string>
+    <string name="titulo_registro_Tarjetas">Card Registration</string>
+    <string name="titulo_registro_egreso_mensual">Monthly Expenses Registration</string>
 
-    <string name="Mes">Mes:</string>
-    <string name="Enero">Enero</string>
-    <string name="Febrero">Febrero</string>
-    <string name="Marzo">Marzo</string>
-    <string name="Abril">Abril</string>
-    <string name="Mayo">Mayo</string>
-    <string name="Junio">Junio</string>
-    <string name="Julio">Julio</string>
-    <string name="Agosto">Agosto</string>
-    <string name="Setiembre">Septiembre</string>
-    <string name="Octubre">Octubre</string>
-    <string name="Noviembre">Noviembre</string>
-    <string name="Diciembre">Diciembre</string>
+    <string name="Mes">Month:</string>
+    <string name="Enero">January</string>
+    <string name="Febrero">February</string>
+    <string name="Marzo">March</string>
+    <string name="Abril">April</string>
+    <string name="Mayo">May</string>
+    <string name="Junio">June</string>
+    <string name="Julio">July</string>
+    <string name="Agosto">August</string>
+    <string name="Setiembre">September</string>
+    <string name="Octubre">October</string>
+    <string name="Noviembre">November</string>
+    <string name="Diciembre">Dicember</string>
 
-    <string name="identificador">Identificador:</string>
-    <string name="Tipo">Tipo:</string>
-    <string name="Egreso">Egreso:</string>
-    <string name="Descripcion">Descripción:</string>
+    <string name="identificador">Identifier:</string>
+    <string name="Tipo">Type:</string>
+    <string name="Egreso">Expenses:</string>
+    <string name="Descripcion">Description:</string>
 
-    <string name="tabla_identificador">Identificador</string>
-    <string name="tabla_Tipo">Tipo</string>
-    <string name="tabla_Egreso">Egreso</string>
-    <string name="tabla_Descripcion">Descripción</string>
-    <string name="tabla_Monto">Monto</string>
+    <string name="tabla_identificador">Identifier</string>
+    <string name="tabla_Tipo">Type</string>
+    <string name="tabla_Egreso">Expenses</string>
+    <string name="tabla_Descripcion">Description</string>
+    <string name="tabla_Monto">Amount</string>
 
-    <string name="Reset_Presupuesto">Reset Presupuesto</string>
-    <string name="parla">Restablece en cero el ingreso mensual y limpia los tipos de egresos del presupuesto</string>
+    <string name="Reset_Presupuesto">Reset Budget</string>
+    <string name="parla">Restore monthly income to zero and clear budget expense types</string>
     <string name="Reset">Reset</string>
-    <string name="incluir_ingreso_mes">Incluir Ingreso Mensual</string>
-    <string name="incluir">Incluir</string>
-    <string name="Monto">Monto:</string>
-    <string name="incluir_Categorías_Egresos">Incluir Categorías de Egresos</string>
-    <string name="categoría_egreso">Categoría de egreso:</string>
+    <string name="incluir_ingreso_mes">Include Monthly Income</string>
+    <string name="incluir">Include</string>
+    <string name="Monto">Amount:</string>
+    <string name="incluir_Categorías_Egresos">Include Categories of Expenditures</string>
+    <string name="categoría_egreso">Expenses Category:</string>
 
-    <string name="parla2">Habilitar un período o mes para que se pueden registrar egresos</string>
-    <string name="Habilitar">Habilitar:</string>
-    <string name="ingreso_Adicional">Ingreso Adicional</string>
-    <string name="estado_Actual">ESTADO ACTUAL:</string>
+    <string name="parla2">Enable a period or month so that expenses can be recorded</string>
+    <string name="Habilitar">Enable</string>
+    <string name="ingreso_Adicional">Additional Income</string>
+    <string name="estado_Actual">ACTUAL STATE:</string>
 
-    <string name="marca">Marca:</string>
-    <string name="Numero">Número:</string>
-    <string name="EntidadFinanciera">Entidad financiera:</string>
-    <string name="tabla_marca">Marca</string>
-    <string name="tabla_entidad">Entidad</string>
-    <string name="tabla_tipo">Tipo</string>
-    <string name="tabla_Numero">Numero</string>
+    <string name="marca">Brand:</string>
+    <string name="Numero">Number:</string>
+    <string name="EntidadFinanciera">Financial entity:</string>
+    <string name="tabla_marca">Brand</string>
+    <string name="tabla_entidad">Entity</string>
+    <string name="tabla_tipo">Type</string>
+    <string name="tabla_Numero">Number</string>
 
-    <string name="Fecha">Fecha:</string>
-    <string name="Hora">Hora(opc):</string>
-    <string name="local_Comercial">Local Comercial::</string>
-    <string name="Metodo_pago">Metodo de pago:</string>
-    <string name="factura"># Factura(opc)::</string>
+    <string name="Fecha">Date:</string>
+    <string name="Hora">Hour(opc):</string>
+    <string name="local_Comercial">Shop:</string>
+    <string name="Metodo_pago">Payment method:</string>
+    <string name="factura"># Bill(opc):</string>
 
-    <string name="Credito">Credito</string>
-    <string name="Debito">Debito</string>
-    <string name="Ahorro">Ahorro:</string>
-    <string name="Gasto">Gasto:</string>
+    <string name="Credito">Credit</string>
+    <string name="Debito">Debit</string>
+    <string name="Ahorro">Saving:</string>
+    <string name="Gasto">Spending:</string>
 
-    <string name="Porcentajepresupuestado">Categoría de egreso :</string>
-    <string name="Porcentajegastado">Porcentaje gastado:</string>
+    <string name="Porcentajepresupuestado">Expenses Category:</string>
+    <string name="Porcentajegastado">Percentage spent:</string>
 
-    <string name="Pago">Pago:</string>
-    <string name="Factura">Factura:</string>
-    <string name="Efectivo">Efectivo</string>
-    <string name="Tarjeta">Tarjeta</string>
-    <string name="Modalidad">Modalidad:</string>
+    <string name="Pago">Payment:</string>
+    <string name="Factura">Bill:</string>
+    <string name="Efectivo">Cash</string>
+    <string name="Tarjeta">Card</string>
+    <string name="Modalidad">Modality:</string>
 
-    <string name="reporte_detalle_egresos">Detalle_egresos</string>
-    <string name="reporte_Balance_categoría_egreso">Balance por categoría de egreso</string>
-    <string name="reporte_Porcentajes_egresos_categoría">Porcentajes de egresos por categoría</string>
-    <string name="reporte_Resumen_gastos_tarjeta">Resumen de gastos por tarjeta:</string>
+    <string name="reporte_detalle_egresos">Expenses detail</string>
+    <string name="reporte_Balance_categoría_egreso">Balance by category of Expenses</string>
+    <string name="reporte_Porcentajes_egresos_categoría">Expenditure percentages by category</string>
+    <string name="reporte_Resumen_gastos_tarjeta">Card Expense Summary:</string>
 
-    <string name="Seleccionar_Mes">Seleccionar Mes:</string>
-    <string name="Categoria">Categoría</string>
-    <string name="Presupuestado">Presupuestado</string>
-    <string name="Gastado_Invertido">Gastado/Invertido</string>
+    <string name="Seleccionar_Mes">Select Month:</string>
+    <string name="Categoria">Category</string>
+    <string name="Presupuestado">Budgeted</string>
+    <string name="Gastado_Invertido">Spent/Inverted</string>
 
-    <string name="Buscar">Buscar</string>
-    <string name="Limpiar">Limpiar</string>
+    <string name="Buscar">Search</string>
+    <string name="Limpiar">Clean</string>
 
+    <string name="Porcentajepresupuestado2">% Budgeted</string>
+    <string name="Porcentajegastado2">% Spent</string>
+    <string name="Seleccionar_tarjeta">% Select Card</string>
+    <string name="Egresos_cancelados">% Canceled Expenses</string>
 
-    <string name="Porcentajepresupuestado2">% Presupuestado</string>
-    <string name="Porcentajegastado2">% Gastado</string>
-    <string name="Seleccionar_tarjeta">% Seleccionar Tarjeta:</string>
-    <string name="Egresos_cancelados">% Egresos Cancelados</string>
+    <string name="incluir_Ingreso_Mensual">Include Monthly Income</string>
 </resources>
