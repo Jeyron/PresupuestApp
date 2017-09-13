@@ -86,7 +86,6 @@ public class Navegacion extends AppCompatActivity
         return true;
     }
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -144,6 +143,7 @@ public class Navegacion extends AppCompatActivity
 
     }
 
+    /*metodo para el acerca de*/
     public void onAlertDialog(MenuItem item) {
         AlertDialog alertDialog;
         alertDialog= new AlertDialog.Builder(this).create();

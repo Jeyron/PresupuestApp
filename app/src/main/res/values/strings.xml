@@ -156,7 +156,7 @@
     <string name="reporte_detalle_egresos">Detalle egresos</string>
     <string name="reporte_Balance_categoría_egreso">Balance por categoría de egreso</string>
     <string name="reporte_Porcentajes_egresos_categoría">Porcentajes de egresos por categoría</string>
-    <string name="reporte_Resumen_gastos_tarjeta">Resumen de gastos por tarjeta:</string>
+    <string name="reporte_Resumen_gastos_tarjeta">Resumen de gastos por tarjeta</string>
 
     <string name="Seleccionar_Mes">Seleccionar Mes:</string>
     <string name="Categoria">Categoría</string>

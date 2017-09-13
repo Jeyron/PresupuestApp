@@ -136,7 +136,7 @@
     <string name="reporte_detalle_egresos">Expenses detail</string>
     <string name="reporte_Balance_categoría_egreso">Balance by category of Expenses</string>
     <string name="reporte_Porcentajes_egresos_categoría">Expenditure percentages by category</string>
-    <string name="reporte_Resumen_gastos_tarjeta">Card Expense Summary:</string>
+    <string name="reporte_Resumen_gastos_tarjeta">Card Expense Summary</string>
 
     <string name="Seleccionar_Mes">Select Month:</string>
     <string name="Categoria">Category</string>
