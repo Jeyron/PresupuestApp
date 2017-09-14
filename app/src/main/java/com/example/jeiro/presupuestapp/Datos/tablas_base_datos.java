@@ -44,5 +44,7 @@ public final class tablas_base_datos {
         public static final String COLUMN_NAME_DESCRIPCION              = "Descripcion";
         public static final String COLUMN_NAME_FACTURA                  = "Factura";
         public static final String COLUMN_NAME_TARJETA                  = "Tarjeta";
+        public static final String COLUMN_NAME_ESTADO                   = "Estado";
+        public static final String COLUMN_NAME_ID_MES                   = "IdMes";
     }
 }

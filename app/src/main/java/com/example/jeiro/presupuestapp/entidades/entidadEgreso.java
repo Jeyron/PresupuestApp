@@ -15,10 +15,13 @@ public class entidadEgreso
     private String descripcion;
     private int    factura;
     private String tarjeta;
+    private String estado;
+    private int    id_mes;
+    public  int    id;
 
     public entidadEgreso (int identificador_categoria, String fecha, String hora,
                           String local, String metodo_pago, int monto,
-                          String descripcion, int factura, String tarjeta)
+                          String descripcion, int factura, String tarjeta, String estado, int id_mes)
     {
         this.identificador_categoria = identificador_categoria;
         this.fecha                   = fecha;
@@ -29,6 +32,25 @@ public class entidadEgreso
         this.descripcion             = descripcion;
         this.factura                 = factura;
         this.tarjeta                 = tarjeta;
+        this.estado                  = estado;
+        this.id_mes                  = id_mes;
+
+    }
+
+    public int getId_mes() {
+        return id_mes;
+    }
+
+    public void setId_mes(int id_mes) {
+        this.id_mes = id_mes;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public int getIdentificador_categoria() {

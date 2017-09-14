@@ -7,6 +7,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import com.example.jeiro.presupuestapp.entidades.entidadMes;
+
+import java.util.ArrayList;
+
+import static com.example.jeiro.presupuestapp.Navegacion.ad;
 
 
 /**
@@ -26,6 +36,7 @@ public class Presupuesto_mensual extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private View viewroot;
 
     private OnFragmentInteractionListener mListener;
 
@@ -64,7 +75,71 @@ public class Presupuesto_mensual extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_presupuesto_mensual, container, false);
+        viewroot = inflater.inflate(R.layout.fragment_presupuesto_mensual, container, false);
+
+        EditText e = (EditText) viewroot.findViewById(R.id.txt_monto_prespuesto_mensual);
+        try
+        {
+            entidadMes a = ad.obtener_id_mes_habilitado(getActivity());
+            if(a.getIngreso() != 0)
+            {
+                e.setEnabled(false);
+                e.setText(a.getIngreso() + "");
+            }
+        }
+        catch (Exception exc){}
+
+        Button b = (Button) viewroot.findViewById(R.id.btn_incluir_ingreso_mensual);
+        b.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                EditText e = (EditText) viewroot.findViewById(R.id.txt_monto_prespuesto_mensual);
+                if (e.getText().length() != 0)
+                {
+                    try {
+                        if (Navegacion.id_mes != 0 && e.isEnabled()) {
+                            entidadMes a = ad.obtener_id_mes_habilitado(getActivity());
+                            a.setIngreso(Integer.parseInt(e.getText().toString()));
+                            ad.agregar_modificar_mes(a, false, getActivity());
+                            e.setEnabled(false);
+                            e.setText(a.getIngreso() + "");
+                            Toast.makeText(getActivity(), "Éxito, periodo "+ a.getNombre() +" habilitado", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getActivity(), "Error, se debe habilitar un periodo sin ingreso", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    catch (Exception exc) {
+                        Toast.makeText(getActivity(), "Error, " + exc.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+                else
+                {
+                    Toast.makeText(getActivity(), "Error, espacios vacíos", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        Button br = (Button) viewroot.findViewById(R.id.btn_reset_presupuesto);
+        br.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                try
+                {
+                    entidadMes a = ad.obtener_id_mes_habilitado(getActivity());
+                    a.setIngreso(0);
+                    ad.agregar_modificar_mes(a,false,getActivity());
+
+                    EditText e = (EditText) viewroot.findViewById(R.id.txt_monto_prespuesto_mensual);
+                    e.setText(0 + "");
+                    Toast.makeText(getActivity(),"Éxito, valores restaurados", Toast.LENGTH_SHORT).show();
+                }
+                catch (Exception e)
+                {
+                    Toast.makeText(getActivity(),"Error, " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        return viewroot;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

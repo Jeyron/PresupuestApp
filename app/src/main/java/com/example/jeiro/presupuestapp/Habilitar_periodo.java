@@ -7,6 +7,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import com.example.jeiro.presupuestapp.entidades.entidadCategoria;
+import com.example.jeiro.presupuestapp.entidades.entidadMes;
+
+import static com.example.jeiro.presupuestapp.Navegacion.ad;
 
 
 /**
@@ -26,6 +35,7 @@ public class Habilitar_periodo extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private View viewroot;
 
     private OnFragmentInteractionListener mListener;
 
@@ -64,7 +74,28 @@ public class Habilitar_periodo extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_habilitar_periodo, container, false);
+        viewroot = inflater.inflate(R.layout.fragment_habilitar_periodo, container, false);
+
+        Button b = (Button) viewroot.findViewById(R.id.button);
+        b.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                try
+                {
+                    String text = getResources().getStringArray(R.array.meses_periodo)[((Spinner) viewroot.findViewById(R.id.spinner_habilitar_periodo_mes)).getSelectedItemPosition()];
+                    entidadMes mes = new entidadMes(text, 0, "Habilitado");
+                    ad.agregar_modificar_mes(mes, true,getActivity());
+                    ad.obtener_id_mes_habilitado(getActivity());
+                    Toast.makeText(getActivity(),"Éxito, ingreso asignado", Toast.LENGTH_SHORT).show();
+                }
+                catch (Exception e)
+                {
+                    Toast.makeText(getActivity(),"Error, " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        //*/
+        return viewroot;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

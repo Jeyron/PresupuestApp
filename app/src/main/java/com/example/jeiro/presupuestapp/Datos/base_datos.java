@@ -46,7 +46,9 @@ public class base_datos extends SQLiteOpenHelper
                     tablas_base_datos.tablaEgreso.COLUMN_NAME_MONTO + NUMBER_TYPE + COMMA_SEP +
                     tablas_base_datos.tablaEgreso.COLUMN_NAME_DESCRIPCION + TEXT_TYPE + COMMA_SEP +
                     tablas_base_datos.tablaEgreso.COLUMN_NAME_FACTURA + NUMBER_TYPE + COMMA_SEP +
-                    tablas_base_datos.tablaEgreso.COLUMN_NAME_TARJETA + TEXT_TYPE + " )";
+                    tablas_base_datos.tablaEgreso.COLUMN_NAME_TARJETA + TEXT_TYPE + COMMA_SEP +
+                    tablas_base_datos.tablaEgreso.COLUMN_NAME_ESTADO + TEXT_TYPE + COMMA_SEP +
+                    tablas_base_datos.tablaEgreso.COLUMN_NAME_ID_MES + NUMBER_TYPE + " )";
 
     private static final String SQL_CREATE_TARJETA =
             "CREATE TABLE " +

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,8 +26,8 @@ import android.widget.Toast;
 
 import com.example.jeiro.presupuestapp.Datos.acceso_datos;
 import com.example.jeiro.presupuestapp.entidades.entidadCategoria;
-
 import java.util.ArrayList;
+import static com.example.jeiro.presupuestapp.Navegacion.ad;
 
 
 /**
@@ -44,7 +45,6 @@ public class Categoria_egreso extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     private ArrayList<entidadCategoria> datos = new ArrayList<>();
-    private acceso_datos ad = new acceso_datos();
     private View viewroot;
 
 
@@ -85,17 +85,18 @@ public class Categoria_egreso extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-/*
-    private void cargar_autoidentificardor ()
+
+    private void cargar_identificardor ()
     {
         acceso_datos ad = new acceso_datos();
-        ArrayList<entidadCategoria> datos = ad.obtener_categoria(null, getActivity());
+        ArrayList<entidadCategoria> datos = ad.obtener_categoria(getActivity());
+        EditText ed = (EditText) getView().findViewById(R.id.txt_identificador);
         if (datos.size() == 0)
-            ((EditText) getView().findViewById(R.id.txt_identificador)).setText("1");
+            ed.setText("1");
         else
-            ((EditText) getView().findViewById(R.id.txt_identificador)).setText((datos.get(datos.size()).id + 1));
+            ed.setText((datos.get(datos.size()).id + 1 + ""));
     }
-*/
+
 
     private void limpiar_tabla()
     {
@@ -131,13 +132,17 @@ public class Categoria_egreso extends Fragment {
             EditText t4 = new EditText(getActivity());
 
             t1.setText(datos.get(i).id + "");
+            t1.setHint("t1 " + i);
             t1.setEnabled(false);
+            t1.setClickable(true);
+            t1.setKeyListener(null);
             t1.setTextSize(17);
             t1.setBackground( getResources().getDrawable(R.drawable.borde_celda));
             t1.setGravity(Gravity.CENTER);
             t1.setLayoutParams(params);
 
             t2.setText(datos.get(i).getEgreso());
+            t1.setHint("t2 " + i);
             t2.setEnabled(false);
             t2.setTextSize(17);
             t2.setBackground( getResources().getDrawable(R.drawable.borde_celda));
@@ -145,13 +150,17 @@ public class Categoria_egreso extends Fragment {
             t2.setLayoutParams(params);
 
             t3.setText(datos.get(i).getTipo());
+            t1.setHint("t3 " + i);
             t3.setEnabled(false);
+            t3.setClickable(true);
+            t3.setKeyListener(null);
             t3.setTextSize(17);
             t3.setBackground( getResources().getDrawable(R.drawable.borde_celda));
             t3.setGravity(Gravity.CENTER);
             t3.setLayoutParams(params);
 
             t4.setText(datos.get(i).getDescripcion());
+            t1.setHint("t4 " + i);
             t4.setEnabled(false);
             t4.setTextSize(17);
             t4.setBackground( getResources().getDrawable(R.drawable.borde_celda));
@@ -163,19 +172,32 @@ public class Categoria_egreso extends Fragment {
             tr.addView(t3);
             tr.addView(t4);
 
-            /*t1.setOnClickListener(new View.OnClickListener() {
+            t1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v)
                 {
-                    //TableLayout tableLayout = (TableLayout) getView().findViewById(R.id.listaCategoriaEgresos);
-                    //int rowIndex = tableLayout.indexOfChild((TableRow)getView().getParent());
-                    //TableRow r = (TableRow) tableLayout.getChildAt(rowIndex);
-                    v.setEnabled(true);
-                    //r.getChildAt(1).setEnabled(true);
-                    //r.getChildAt(2).setEnabled(true);
-                    //r.getChildAt(3).setEnabled(true);
+                    EditText ef = (EditText) v;
+                    Toast.makeText(getActivity(), ef.getText(), Toast.LENGTH_SHORT).show();
+                    if (ef.getCurrentTextColor() == Color.WHITE)
+                        ef.setTextColor(Color.BLACK);
+                    else
+                        ef.setTextColor(Color.WHITE);
                 }
-            });*/
+            });
+
+            t3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v)
+                {
+                    EditText ef = (EditText) v;
+                    String t = ef.getText().toString();
+                    if (t.equals("Ahorro"))
+                        t = "Gasto";
+                    else
+                        t = "Ahorro";
+                    ef.setText(t);
+                }
+            });
             table.addView(tr);
             table.requestLayout();
         }
@@ -193,8 +215,9 @@ public class Categoria_egreso extends Fragment {
         viewroot = inflater.inflate(R.layout.fragment_categoria_egreso, container, false);
         try
         {
-            datos = ad.obtener_categoria(null, getActivity());
+            datos = ad.obtener_categoria(getActivity());
             completar_tabla();
+            cargar_identificardor();
         }
         catch (Exception e)
         {
@@ -219,8 +242,9 @@ public class Categoria_egreso extends Fragment {
                         if (ad.agregar_modificar_categoria(ec, true, getActivity()))
                         {
                             limpiar_tabla();
-                            datos = ad.obtener_categoria(null, getActivity());
+                            datos = ad.obtener_categoria(getActivity());
                             completar_tabla();
+                            cargar_identificardor();
                             Toast.makeText(getActivity(), "Éxito, guardado", Toast.LENGTH_SHORT).show();
                         }
                         else
@@ -239,19 +263,112 @@ public class Categoria_egreso extends Fragment {
             @Override
             public void onClick(View v) {
                 TableLayout table = (TableLayout) getView().findViewById(R.id.listaCategoriaEgresos);
+                boolean temp = false;
                 for(int i = 1; i < table.getChildCount(); i++)
                 {
                     //Remember that .getChildAt() method returns a View, so you would have to cast a specific control.
                     TableRow row = (TableRow) table.getChildAt(i);
                     //This will iterate through the table row.
+
                     for(int j = 1; j < row.getChildCount(); j++)
                     {
                         EditText ed = (EditText) row.getChildAt(j);
                         if (ed.isEnabled())
+                        {
                             ed.setEnabled(false);
+                            temp = true;
+                        }
                         else
                             ed.setEnabled(true);
                         //Do what you need to do.
+                    }
+
+                    if(temp)
+                    {
+                        try
+                        {
+                            entidadCategoria a = new entidadCategoria(
+                                    ((EditText)row.getChildAt(2)).getText().toString(),
+                                    ((EditText)row.getChildAt(3)).getText().toString(),
+                                    ((EditText)row.getChildAt(1)).getText().toString(), 0, 0);
+                            a.id = Integer.parseInt(((EditText)row.getChildAt(0)).getText().toString());
+                            ad.agregar_modificar_categoria(a,false,getActivity());
+                        }
+                        catch (Exception e)
+                        {
+                            Toast.makeText(getActivity(),"Error, " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                }
+                if(temp)
+                {
+                    try
+                    {
+                        limpiar_tabla();
+                        datos = ad.obtener_categoria(getActivity());
+                        completar_tabla();
+                    }
+                    catch (Exception e)
+                    {
+                        Toast.makeText(getActivity(), "Error, " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
+
+        Button ba = (Button)viewroot.findViewById(R.id.btn_eliminar_categoria);
+        ba.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TableLayout table = (TableLayout) getView().findViewById(R.id.listaCategoriaEgresos);
+                boolean temp = false;
+                for(int i = 1; i < table.getChildCount(); i++)
+                {
+                    //Remember that .getChildAt() method returns a View, so you would have to cast a specific control.
+                    TableRow row = (TableRow) table.getChildAt(i);
+                    //This will iterate through the table row.
+                    EditText ed = (EditText) row.getChildAt(0);
+                    if (ed.isEnabled())
+                    {
+                        ed.setEnabled(false);
+                        temp = true;
+                    }
+                    else
+                        ed.setEnabled(true);
+
+                    if(temp && ed.getCurrentTextColor() == Color.WHITE)
+                    {
+                        try
+                        {
+                            entidadCategoria a = new entidadCategoria(
+                                    "",
+                                    "",
+                                    "", 0, 0);
+                            a.id = Integer.parseInt(((EditText)row.getChildAt(0)).getText().toString());
+                            if (ad.eliminar_categoria(a,getActivity()))
+                                Toast.makeText(getActivity(),"Éxito, datos eliminados", Toast.LENGTH_SHORT).show();
+                            else
+                                Toast.makeText(getActivity(),"Error, algo ocurrió", Toast.LENGTH_SHORT).show();
+                        }
+                        catch (Exception e)
+                        {
+                            Toast.makeText(getActivity(),"Error, " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                }
+                if(temp)
+                {
+                    try
+                    {
+                        limpiar_tabla();
+                        datos = ad.obtener_categoria(getActivity());
+                        completar_tabla();
+                    }
+                    catch (Exception e)
+                    {
+                        Toast.makeText(getActivity(), "Error, " + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
             }

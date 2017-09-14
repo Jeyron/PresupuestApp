@@ -9,6 +9,7 @@ public class entidadMes
     private String nombre;
     private int    ingreso;
     private String estado;
+    public int id;
 
     public entidadMes (String nombre, int ingreso, String estado)
     {

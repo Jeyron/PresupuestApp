@@ -1,5 +1,6 @@
 package com.example.jeiro.presupuestapp;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -17,6 +18,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.example.jeiro.presupuestapp.Datos.acceso_datos;
+import com.example.jeiro.presupuestapp.entidades.entidadMes;
+
+import java.util.ArrayList;
 
 public class Navegacion extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -26,6 +33,8 @@ public class Navegacion extends AppCompatActivity
         Reportes.OnFragmentInteractionListener{
 
     Button btn_salida;
+    public static int id_mes;
+    public static final acceso_datos ad = new acceso_datos();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +52,7 @@ public class Navegacion extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
+        obtener_mes_habilitado();
     }
     /* Botón de salida (final de la aplicación)*/
     @Override
@@ -136,6 +145,23 @@ public class Navegacion extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void obtener_mes_habilitado ()
+    {
+        try
+        {
+            entidadMes a = ad.obtener_id_mes_habilitado(this);
+            ArrayList<entidadMes> datos = ad.obtener_Mes(this);
+            if(id_mes == 0)
+                Toast.makeText(this, "No se ha habilitado un periodo", Toast.LENGTH_SHORT).show();
+            else
+                Toast.makeText(this, "Habilitado periodo: " + a.getNombre() , Toast.LENGTH_SHORT).show();
+        }
+        catch (Exception e)
+        {
+            Toast.makeText(this, "No se ha habilitado un periodo", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
