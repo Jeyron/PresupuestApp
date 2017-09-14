@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logo1"
+        android:icon="@drawable/logo_oificial"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo1"
+        android:roundIcon="@drawable/logo_oificial"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -20,6 +20,10 @@
             android:name=".Navegacion"
             android:label="PresupuestApp"
             android:theme="@style/AppTheme" />
+        <activity android:name=".Reporte_detalle_egresos" />
+        <activity android:name=".Reporte_balance_categoria_egreso" />
+        <activity android:name=".Reporte_porcentaje_egresos_categoria" />
+        <activity android:name=".Reporte_resumen_gastos_tarjeta"></activity>
     </application>
 
 </manifest>
