@@ -56,10 +56,9 @@
                     android:layout_marginTop="5dp"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
                     android:layout_alignLeft="@+id/txt_hora_egreso_mensual"
-                    android:layout_alignStart="@+id/txt_hora_egreso_mensual" />
+                    android:layout_alignStart="@+id/txt_hora_egreso_mensual"
+                    android:layout_marginRight="50dp"/>
 
                 <TextView
                     android:id="@+id/textView28"
@@ -78,6 +77,7 @@
                     android:layout_marginTop="55dp"
                     android:ems="10"
                     android:inputType="textPersonName"
+                    android:layout_marginRight="50dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignLeft="@+id/spinner_categoria_egreso_mensual"
@@ -232,6 +232,24 @@
                     android:text="@string/Registrar"
                     android:textColor="@color/colorTexto" />
 
+                <Button
+                    android:id="@+id/btn_fecha"
+                    android:layout_width="50dp"
+                    android:onClick="showDatePickerDialog"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="7dp"
+                    android:text="..." />
+
+                <Button
+                    android:id="@+id/btn_hora"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="55dp"
+                    android:text="..." />
 
             </RelativeLayout>
         </ScrollView>
