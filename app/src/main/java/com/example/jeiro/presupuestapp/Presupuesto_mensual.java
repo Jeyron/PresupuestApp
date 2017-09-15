@@ -92,7 +92,7 @@ public class Presupuesto_mensual extends Fragment {
         String valores[];
         int cont = 0;
         ArrayList<entidadCategoria> temp = new ArrayList<>();
-        for (int i = 0; i < datos.size(); i++) if (datos.get(i-1).getMonto() == 0){ cont++;temp.add(datos.get(i-1));}
+        for (int i = 0; i < datos.size(); i++) if (datos.get(i).getMonto() == 0){ cont++;temp.add(datos.get(i));}
         if(temp.size() == 0)
             valores = new String[]{"No hay categorias"};
         else
@@ -129,12 +129,12 @@ public class Presupuesto_mensual extends Fragment {
         int largo = datos.size();
         for (int i = 0; i < largo; i++)
         {
-            if(datos.get(i-1).getMonto() != 0) {
+            if(datos.get(i).getMonto() != 0) {
                 TableRow tr = new TableRow(getActivity());
                 EditText t1 = new EditText(getActivity());
                 EditText t2 = new EditText(getActivity());
 
-                t1.setText(datos.get(i-1).getEgreso());
+                t1.setText(datos.get(i).getEgreso());
                 t1.setEnabled(false);
                 t1.setClickable(true);
                 t1.setKeyListener(null);
@@ -143,7 +143,7 @@ public class Presupuesto_mensual extends Fragment {
                 t1.setGravity(Gravity.CENTER);
                 t1.setLayoutParams(params);
 
-                t2.setText(datos.get(i-1).getMonto()+"");
+                t2.setText(datos.get(i).getMonto()+"");
                 t2.setEnabled(false);
                 t2.setInputType(InputType.TYPE_CLASS_NUMBER);
                 t2.setTextSize(17);
@@ -168,7 +168,7 @@ public class Presupuesto_mensual extends Fragment {
                 table.addView(tr);
                 table.requestLayout();
 
-                total += datos.get(i-1).getMonto();
+                total += datos.get(i).getMonto();
             }
         }
     }
@@ -177,7 +177,7 @@ public class Presupuesto_mensual extends Fragment {
     {
         entidadCategoria ec;
         for (int i = 0; i < datos.size(); i++)
-            if(datos.get(i-1).getEgreso().equals(nombre))return datos.get(i-1);
+            if(datos.get(i).getEgreso().equals(nombre))return datos.get(i);
         return null;
     }
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -211,6 +211,9 @@ public class Presupuesto_mensual extends Fragment {
             public void onClick(View v){
                 try
                 {
+                    limpiar_tabla();
+                    datos  = ad.obtener_categoria(getActivity());
+                    completar_tabla();
                     String sp = ((Spinner) viewroot.findViewById(R.id.spinner_presupuesto_mensual_categoria_egreso)).getSelectedItem().toString();
                     //Toast.makeText(getActivity(), sp.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
                     if(sp.equals("No hay categorias"))
@@ -224,13 +227,15 @@ public class Presupuesto_mensual extends Fragment {
 
                         if (mes_actual.getIngreso() == 0)
                             Toast.makeText(getActivity(), "Error, sin ingreso", Toast.LENGTH_SHORT).show();
-                        else if (text.length() == 0 || ec == null)
+                        else if (text.length() == 0 || text.equals("0") || ec == null)
                             Toast.makeText(getActivity(), "Error, espacios vacíos", Toast.LENGTH_SHORT).show();
                         else
                         {
                             ec.setMonto(Integer.parseInt(text));
-                            if (ec.getMonto() + total > mes_actual.getIngreso())
+                            if (ec.getMonto() + total > mes_actual.getIngreso()) {
                                 Toast.makeText(getActivity(), "Error, No tiene suficiente credito", Toast.LENGTH_SHORT).show();
+                                ec.setMonto(0);
+                            }
                             else if (ad.agregar_modificar_categoria(ec, false, getActivity()))
                             {
                                 limpiar_tabla();
@@ -243,6 +248,7 @@ public class Presupuesto_mensual extends Fragment {
                                 Toast.makeText(getActivity(), "Error, no ha logrado guardar", Toast.LENGTH_SHORT).show();
                         }
                     }
+                    datos = ad.obtener_categoria(getActivity());
                 }
                 catch (Exception e)
                 {
@@ -376,7 +382,7 @@ public class Presupuesto_mensual extends Fragment {
             @Override
             public void onClick(View v){
                 EditText e = (EditText) viewroot.findViewById(R.id.txt_monto_prespuesto_mensual);
-                if (e.getText().length() != 0)
+                if (e.getText().length() != 0 && e.getText().equals("0"))
                 {
                     try {
                         if (Navegacion.id_mes != 0 && e.isEnabled()) {
@@ -413,13 +419,13 @@ public class Presupuesto_mensual extends Fragment {
                         ad.agregar_modificar_mes(a, false, getActivity());
                         datos = ad.obtener_categoria(getActivity());
                         for (int i = 0; i < datos.size(); i++) {
-                            entidadCategoria ca = datos.get(i-1);
+                            entidadCategoria ca = datos.get(i);
                             ca.setMonto(0);
                             ad.agregar_modificar_categoria(ca, true, getActivity());
                         }
                         ArrayList<entidadEgreso> datos = ad.obtener_Egreso(getActivity());
                         for (int i = 0; i < datos.size(); i++) {
-                            entidadEgreso ed = datos.get(i-1);
+                            entidadEgreso ed = datos.get(i);
                             if (id_mes == ed.getId_mes()) {
                                 ed.setEstado("Nulo");
                                 ed.id = id_mes;
