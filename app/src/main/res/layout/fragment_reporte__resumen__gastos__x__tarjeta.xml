@@ -1,0 +1,161 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jeiro.presupuestapp.Reporte_Resumen_Gastos_X_Tarjeta">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/reporte_Resumen_gastos_tarjeta"
+                    android:textColor="@color/colorFondo"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/Seleccionar_Mes"
+                    android:textColor="#000" />
+                <Spinner
+                    android:id="@+id/spinner_Reporte_Resumen_Gastos_Tarjeta_mes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text1"
+                    android:entries="@array/meses_periodo"
+                    android:layout_marginTop="14dp"
+                    android:layout_alignLeft="@+id/text1"
+                    android:layout_alignStart="@+id/text1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/Seleccionar_tarjeta"
+                    android:textColor="#000" />
+                <Spinner
+                    android:id="@+id/spinner_Reporte_Resumen_Gastos_Tarjeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text"
+                    android:entries="@array/marca_tarjeta"
+                    android:layout_marginTop="14dp"
+                    android:layout_alignLeft="@+id/text"
+                    android:layout_alignStart="@+id/text" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TableLayout
+                    android:id="@+id/listaReporteResumenGastosTarjeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/borde_celda">
+                    <TableRow
+                        android:id="@+id/cabeceraListalistaReporteResumenGastosTarjetas"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/columnaReporteTarjetaMarca"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/borde_celda"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/tabla_marca"
+                            android:textColor="@color/colorFondo"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/columnaReporteTarjetaEntidad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:background="@drawable/borde_celda"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/tabla_entidad"
+                            android:textColor="@color/colorFondo"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/columnaReporteTarjetaTipo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/borde_celda"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/tabla_tipo"
+                            android:textColor="@color/colorFondo"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/columnaReporteTarjetaNumero"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/borde_celda"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/tabla_Numero"
+                            android:textColor="@color/colorFondo"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/columnaReporteTarjetaCancelado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/borde_celda"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/Egresos_cancelados"
+                            android:textColor="@color/colorFondo"
+                            android:textSize="17sp" />
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

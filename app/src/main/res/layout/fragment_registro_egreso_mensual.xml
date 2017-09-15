@@ -237,6 +237,8 @@
                     android:layout_width="50dp"
                     android:onClick="showDatePickerDialog"
                     android:layout_height="40dp"
+                    android:background="@drawable/btnpulsable"
+                    android:textColor="@color/colorTexto"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="7dp"
@@ -245,6 +247,8 @@
                 <Button
                     android:id="@+id/btn_hora"
                     android:layout_width="50dp"
+                    android:background="@drawable/btnpulsable"
+                    android:textColor="@color/colorTexto"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"

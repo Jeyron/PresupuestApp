@@ -111,6 +111,6 @@ public class Registro_egreso_mensual extends Fragment {
     public void showDatePickerDialog(View v)
     {
         DialogFragment newFragmentDate = new Date_Picker();
-        newFragmentDate.show(getFragmentManager(), "Date Picker");
+        newFragmentDate.show(getFragmentManager(),"Date Picker");
     }
 }

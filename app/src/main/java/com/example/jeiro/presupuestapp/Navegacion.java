@@ -30,7 +30,9 @@ public class Navegacion extends AppCompatActivity
         Categoria_egreso.OnFragmentInteractionListener,Presupuesto_mensual.OnFragmentInteractionListener,
         Habilitar_periodo.OnFragmentInteractionListener,Registro_egreso_mensual.OnFragmentInteractionListener,
         Registrar_extra_ingreso.OnFragmentInteractionListener,Registro_tarjetas.OnFragmentInteractionListener,
-        Reportes.OnFragmentInteractionListener{
+        Reporte_Detalle_Egreos.OnFragmentInteractionListener,Reporte_Balance_X_Categoria.OnFragmentInteractionListener,
+        Reporte_Resumen_Gastos_X_Tarjeta.OnFragmentInteractionListener,
+        Reporte_Porcentaje_Egreos_X_Categoria.OnFragmentInteractionListener{
 
     Button btn_salida;
     public static int id_mes;
@@ -135,8 +137,20 @@ public class Navegacion extends AppCompatActivity
             fragment = new Registro_egreso_mensual();
             fragment_seleccionado=true;
         }
-        else if (id == R.id.reportes) {
-            fragment = new Reportes();
+        else if (id == R.id.btn_reporte_detalle_egreos) {
+            fragment = new Reporte_Detalle_Egreos();
+            fragment_seleccionado=true;
+        }
+        else if (id == R.id.btn_reporte_balance_por_categoria) {
+            fragment = new Reporte_Balance_X_Categoria();
+            fragment_seleccionado=true;
+        }
+        else if (id == R.id.btn_reporte_porcentaje_egreos_x_categoria) {
+            fragment = new Reporte_Porcentaje_Egreos_X_Categoria();
+            fragment_seleccionado=true;
+        }
+        else if (id == R.id.reporte_resumen_gastos_x_tarjeta) {
+            fragment = new Reporte_Resumen_Gastos_X_Tarjeta();
             fragment_seleccionado=true;
         }
         if(fragment_seleccionado){
@@ -174,7 +188,7 @@ public class Navegacion extends AppCompatActivity
         AlertDialog alertDialog;
         alertDialog= new AlertDialog.Builder(this).create();
         alertDialog.setTitle("Acerca De");
-        alertDialog.setMessage("Este proyecto fue realizado por estudiantes del Instituto Tecnologico de Costa Rica");
+        alertDialog.setMessage("Este proyecto fue realizado por estudiantes del Instituto Tecnologico de Costa Rica del centro académico de Limón");
         alertDialog.show();
     }
 }
