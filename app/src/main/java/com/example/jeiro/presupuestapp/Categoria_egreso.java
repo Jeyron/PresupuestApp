@@ -28,6 +28,7 @@ import com.example.jeiro.presupuestapp.Datos.acceso_datos;
 import com.example.jeiro.presupuestapp.entidades.entidadCategoria;
 import java.util.ArrayList;
 import static com.example.jeiro.presupuestapp.Navegacion.ad;
+import static com.example.jeiro.presupuestapp.Navegacion.id_mes;
 
 
 /**
@@ -94,13 +95,13 @@ public class Categoria_egreso extends Fragment {
         if (datos.size() == 0)
             ed.setText("1");
         else
-            ed.setText((datos.get(datos.size()).id + 1 + ""));
+            ed.setText(datos.get(datos.size()-1).id + 1 + "");
     }
 
 
     private void limpiar_tabla()
     {
-        TableLayout table = (TableLayout) getView().findViewById(R.id.listaCategoriaEgresos);
+        TableLayout table = (TableLayout) getView().findViewById(R.id.listaCategoriaEgresosCategoria);
         TableRow tb = (TableRow) getView().findViewById(R.id.cabeceraListaCategoriaEgresos);
         table.removeAllViews();
 
@@ -111,7 +112,7 @@ public class Categoria_egreso extends Fragment {
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     private void completar_tabla()
     {
-        TableLayout table = (TableLayout) getView().findViewById(R.id.listaCategoriaEgresos);
+        TableLayout table = (TableLayout) getView().findViewById(R.id.listaCategoriaEgresosCategoria);
         TableRow.LayoutParams params = new TableRow.LayoutParams(0, TableLayout.LayoutParams.WRAP_CONTENT, 1f);
         TextView tr1 = (TextView) viewroot.findViewById(R.id.columnaIdentificador);
         TextView tr2 = (TextView) getActivity().findViewById(R.id.columnaEgreso);
@@ -132,7 +133,6 @@ public class Categoria_egreso extends Fragment {
             EditText t4 = new EditText(getActivity());
 
             t1.setText(datos.get(i).id + "");
-            t1.setHint("t1 " + i);
             t1.setEnabled(false);
             t1.setClickable(true);
             t1.setKeyListener(null);
@@ -142,7 +142,6 @@ public class Categoria_egreso extends Fragment {
             t1.setLayoutParams(params);
 
             t2.setText(datos.get(i).getEgreso());
-            t1.setHint("t2 " + i);
             t2.setEnabled(false);
             t2.setTextSize(17);
             t2.setBackground( getResources().getDrawable(R.drawable.borde_celda));
@@ -150,7 +149,6 @@ public class Categoria_egreso extends Fragment {
             t2.setLayoutParams(params);
 
             t3.setText(datos.get(i).getTipo());
-            t1.setHint("t3 " + i);
             t3.setEnabled(false);
             t3.setClickable(true);
             t3.setKeyListener(null);
@@ -160,7 +158,6 @@ public class Categoria_egreso extends Fragment {
             t3.setLayoutParams(params);
 
             t4.setText(datos.get(i).getDescripcion());
-            t1.setHint("t4 " + i);
             t4.setEnabled(false);
             t4.setTextSize(17);
             t4.setBackground( getResources().getDrawable(R.drawable.borde_celda));
@@ -203,9 +200,13 @@ public class Categoria_egreso extends Fragment {
         }
     }
 
-    private void modificar_valores ()
+    private boolean categoria_existe (String descripcion)
     {
-
+        for (int i = 0; i < datos.size();i++)
+        {
+            if(datos.get(i).getDescripcion().equals(descripcion)) return true;
+        }
+        return false;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -216,8 +217,8 @@ public class Categoria_egreso extends Fragment {
         try
         {
             datos = ad.obtener_categoria(getActivity());
-            completar_tabla();
             cargar_identificardor();
+            completar_tabla();
         }
         catch (Exception e)
         {
@@ -231,20 +232,20 @@ public class Categoria_egreso extends Fragment {
                 try {
                     entidadCategoria ec = new entidadCategoria(
                             getResources().getStringArray(R.array.categoria)[((Spinner) getView().findViewById(R.id.spinner_tipo_categoria)).getSelectedItemPosition()],
-                            ((EditText) viewroot.findViewById(R.id.txt_egreso_nombre)).getText().toString(),
                             ((EditText) viewroot.findViewById(R.id.txt_descripcion_categoria_egreso)).getText().toString(),
+                            ((EditText) viewroot.findViewById(R.id.txt_egreso_nombre)).getText().toString(),
                             0, 0);
 
                     if (ec.getEgreso().length() == 0 || ec.getDescripcion().length() == 0)
                         Toast.makeText(getActivity(), "Error, espacios vacíos", Toast.LENGTH_SHORT).show();
                     else
                     {
-                        if (ad.agregar_modificar_categoria(ec, true, getActivity()))
+                        if (!categoria_existe(ec.getDescripcion()) && ad.agregar_modificar_categoria(ec, true, getActivity()))
                         {
                             limpiar_tabla();
                             datos = ad.obtener_categoria(getActivity());
-                            completar_tabla();
                             cargar_identificardor();
+                            completar_tabla();
                             Toast.makeText(getActivity(), "Éxito, guardado", Toast.LENGTH_SHORT).show();
                         }
                         else
@@ -262,7 +263,7 @@ public class Categoria_egreso extends Fragment {
         bc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TableLayout table = (TableLayout) getView().findViewById(R.id.listaCategoriaEgresos);
+                TableLayout table = (TableLayout) getView().findViewById(R.id.listaCategoriaEgresosCategoria);
                 boolean temp = false;
                 for(int i = 1; i < table.getChildCount(); i++)
                 {
@@ -287,12 +288,18 @@ public class Categoria_egreso extends Fragment {
                     {
                         try
                         {
+                            String Tipo = (((EditText)row.getChildAt(2)).getText().toString().equals(""))? datos.get(i).getTipo() : ((EditText)row.getChildAt(2)).getText().toString();
+                            String Descripcion = (((EditText)row.getChildAt(3)).getText().toString().equals(""))? datos.get(i).getDescripcion() : ((EditText)row.getChildAt(3)).getText().toString();
+                            String Egreso = (((EditText)row.getChildAt(1)).getText().toString().equals(""))? datos.get(i).getEgreso() : ((EditText)row.getChildAt(1)).getText().toString();
                             entidadCategoria a = new entidadCategoria(
-                                    ((EditText)row.getChildAt(2)).getText().toString(),
-                                    ((EditText)row.getChildAt(3)).getText().toString(),
-                                    ((EditText)row.getChildAt(1)).getText().toString(), 0, 0);
+                                    Tipo,
+                                    Descripcion,
+                                    Egreso, 0, 0);
                             a.id = Integer.parseInt(((EditText)row.getChildAt(0)).getText().toString());
-                            ad.agregar_modificar_categoria(a,false,getActivity());
+                            if(!categoria_existe(Descripcion))
+                                ad.agregar_modificar_categoria(a,false,getActivity());
+                            else
+                                Toast.makeText(getActivity(),"Error, categoria existente", Toast.LENGTH_SHORT).show();
                         }
                         catch (Exception e)
                         {
@@ -321,7 +328,7 @@ public class Categoria_egreso extends Fragment {
         ba.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TableLayout table = (TableLayout) getView().findViewById(R.id.listaCategoriaEgresos);
+                TableLayout table = (TableLayout) getView().findViewById(R.id.listaCategoriaEgresosCategoria);
                 boolean temp = false;
                 for(int i = 1; i < table.getChildCount(); i++)
                 {
@@ -341,15 +348,21 @@ public class Categoria_egreso extends Fragment {
                     {
                         try
                         {
-                            entidadCategoria a = new entidadCategoria(
-                                    "",
-                                    "",
-                                    "", 0, 0);
-                            a.id = Integer.parseInt(((EditText)row.getChildAt(0)).getText().toString());
-                            if (ad.eliminar_categoria(a,getActivity()))
-                                Toast.makeText(getActivity(),"Éxito, datos eliminados", Toast.LENGTH_SHORT).show();
+                            if(datos.get(i).getMonto() != 0)
+                            {
+                                entidadCategoria a = new entidadCategoria(
+                                        "",
+                                        "",
+                                        "", 0, 0);
+                                a.id = datos.get(i).id;
+                                if (ad.eliminar_categoria(a, getActivity()))
+                                    Toast.makeText(getActivity(), "Éxito, datos eliminados", Toast.LENGTH_SHORT).show();
+                                else
+                                    Toast.makeText(getActivity(), "Error, algo ocurrió", Toast.LENGTH_SHORT).show();
+                            }
                             else
-                                Toast.makeText(getActivity(),"Error, algo ocurrió", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "Error, Ya está asociada", Toast.LENGTH_SHORT).show();
+
                         }
                         catch (Exception e)
                         {

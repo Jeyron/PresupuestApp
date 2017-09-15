@@ -50,7 +50,7 @@ public class acceso_datos
         return true;
     }
 
-    public boolean agregar_modificar_egreso (entidadEgreso egreso, boolean fork, Context context)
+    public boolean agregar_modificar_egreso (entidadEgreso egreso, boolean fork, int tipoUpdate, Context context)
     {
         base_datos helper = new base_datos(context);
         try
@@ -76,8 +76,10 @@ public class acceso_datos
             else
             {
                 SQLiteDatabase db = helper.getWritableDatabase();
-                ArrayList<entidadEgreso> a = obtener_Egreso(context);
-                db.update(tablas_base_datos.tablaEgreso.TABLE_NAME, c, "_id=" + egreso.id, null);
+                if(tipoUpdate == 1)
+                    db.update(tablas_base_datos.tablaEgreso.TABLE_NAME, c, "_id=" + egreso.id, null);
+                else if (tipoUpdate == 2)
+                    db.update(tablas_base_datos.tablaEgreso.TABLE_NAME, c, "IdMes=" + egreso.id, null);
                 db.close();
             }
 
