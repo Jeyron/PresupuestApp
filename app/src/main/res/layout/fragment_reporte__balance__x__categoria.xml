@@ -33,6 +33,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <TextView
                     android:id="@+id/text1"
                     android:layout_width="wrap_content"
@@ -45,15 +46,33 @@
                     android:layout_marginTop="25dp"
                     android:text="@string/Seleccionar_Mes"
                     android:textColor="#000" />
+
                 <Spinner
                     android:id="@+id/spinner_Reporte_Balance_Categoria_Egresos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/text1"
-                    android:entries="@array/meses_periodo"
-                    android:layout_marginTop="14dp"
                     android:layout_alignLeft="@+id/text1"
-                    android:layout_alignStart="@+id/text1" />
+                    android:layout_alignStart="@+id/text1"
+                    android:layout_below="@+id/text1"
+                    android:layout_marginTop="14dp"
+                    android:entries="@array/meses_periodo" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/spinner_Reporte_Balance_Categoria_Egresos"
+                    android:layout_alignStart="@+id/spinner_Reporte_Balance_Categoria_Egresos"
+                    android:layout_below="@+id/spinner_Reporte_Balance_Categoria_Egresos"
+                    android:layout_marginTop="27dp"
+                    android:text="@string/Buscar"
+                    android:background="@drawable/btnpulsable"
+                    android:textColor="@color/colorTexto"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="15dp"/>
+
+
             </RelativeLayout>
 
             <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"

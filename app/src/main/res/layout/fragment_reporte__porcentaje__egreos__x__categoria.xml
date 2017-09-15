@@ -54,6 +54,21 @@
                     android:layout_marginTop="14dp"
                     android:layout_alignLeft="@+id/text1"
                     android:layout_alignStart="@+id/text1" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignLeft="@+id/spinner_ReportePorcentaje_EgresosCategoria"
+                    android:layout_alignStart="@+id/spinner_ReportePorcentaje_EgresosCategoria"
+                    android:layout_below="@+id/spinner_ReportePorcentaje_EgresosCategoria"
+                    android:layout_marginTop="27dp"
+                    android:text="@string/Buscar"
+                    android:background="@drawable/btnpulsable"
+                    android:textColor="@color/colorTexto"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="15dp"/>
             </RelativeLayout>
 
 
