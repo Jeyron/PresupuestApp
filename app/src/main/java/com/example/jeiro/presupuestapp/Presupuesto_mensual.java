@@ -92,7 +92,7 @@ public class Presupuesto_mensual extends Fragment {
         String valores[];
         int cont = 0;
         ArrayList<entidadCategoria> temp = new ArrayList<>();
-        for (int i = 0; i < datos.size(); i++) if (datos.get(i).getMonto() == 0){ cont++;temp.add(datos.get(i));}
+        for (int i = 0; i < datos.size(); i++) if (datos.get(i-1).getMonto() == 0){ cont++;temp.add(datos.get(i-1));}
         if(temp.size() == 0)
             valores = new String[]{"No hay categorias"};
         else
@@ -129,12 +129,12 @@ public class Presupuesto_mensual extends Fragment {
         int largo = datos.size();
         for (int i = 0; i < largo; i++)
         {
-            if(datos.get(i).getMonto() != 0) {
+            if(datos.get(i-1).getMonto() != 0) {
                 TableRow tr = new TableRow(getActivity());
                 EditText t1 = new EditText(getActivity());
                 EditText t2 = new EditText(getActivity());
 
-                t1.setText(datos.get(i).getEgreso());
+                t1.setText(datos.get(i-1).getEgreso());
                 t1.setEnabled(false);
                 t1.setClickable(true);
                 t1.setKeyListener(null);
@@ -143,7 +143,7 @@ public class Presupuesto_mensual extends Fragment {
                 t1.setGravity(Gravity.CENTER);
                 t1.setLayoutParams(params);
 
-                t2.setText(datos.get(i).getMonto()+"");
+                t2.setText(datos.get(i-1).getMonto()+"");
                 t2.setEnabled(false);
                 t2.setInputType(InputType.TYPE_CLASS_NUMBER);
                 t2.setTextSize(17);
@@ -168,7 +168,7 @@ public class Presupuesto_mensual extends Fragment {
                 table.addView(tr);
                 table.requestLayout();
 
-                total += datos.get(i).getMonto();
+                total += datos.get(i-1).getMonto();
             }
         }
     }
@@ -177,7 +177,7 @@ public class Presupuesto_mensual extends Fragment {
     {
         entidadCategoria ec;
         for (int i = 0; i < datos.size(); i++)
-            if(datos.get(i).getEgreso().equals(nombre))return datos.get(i);
+            if(datos.get(i-1).getEgreso().equals(nombre))return datos.get(i-1);
         return null;
     }
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -282,7 +282,7 @@ public class Presupuesto_mensual extends Fragment {
                         {
                             if(total_Actual <= total) {
                                 String Egreso = ((EditText) row.getChildAt(0)).getText().toString();
-                                int Monto = (((EditText) row.getChildAt(1)).getText().toString().equals("")) ? datos.get(i).getMonto() : Integer.parseInt(((EditText) row.getChildAt(1)).getText().toString());
+                                int Monto = (((EditText) row.getChildAt(1)).getText().toString().equals("")) ? datos.get(i-1).getMonto() : Integer.parseInt(((EditText) row.getChildAt(1)).getText().toString());
                                 entidadCategoria a = buscar_categoria(Egreso);
                                 a.setMonto(Monto);
                                 ad.agregar_modificar_categoria(a, false, getActivity());
@@ -413,13 +413,13 @@ public class Presupuesto_mensual extends Fragment {
                         ad.agregar_modificar_mes(a, false, getActivity());
                         datos = ad.obtener_categoria(getActivity());
                         for (int i = 0; i < datos.size(); i++) {
-                            entidadCategoria ca = datos.get(i);
+                            entidadCategoria ca = datos.get(i-1);
                             ca.setMonto(0);
                             ad.agregar_modificar_categoria(ca, true, getActivity());
                         }
                         ArrayList<entidadEgreso> datos = ad.obtener_Egreso(getActivity());
                         for (int i = 0; i < datos.size(); i++) {
-                            entidadEgreso ed = datos.get(i);
+                            entidadEgreso ed = datos.get(i-1);
                             if (id_mes == ed.getId_mes()) {
                                 ed.setEstado("Nulo");
                                 ed.id = id_mes;

@@ -288,18 +288,20 @@ public class Categoria_egreso extends Fragment {
                     {
                         try
                         {
-                            String Tipo = (((EditText)row.getChildAt(2)).getText().toString().equals(""))? datos.get(i).getTipo() : ((EditText)row.getChildAt(2)).getText().toString();
-                            String Descripcion = (((EditText)row.getChildAt(3)).getText().toString().equals(""))? datos.get(i).getDescripcion() : ((EditText)row.getChildAt(3)).getText().toString();
-                            String Egreso = (((EditText)row.getChildAt(1)).getText().toString().equals(""))? datos.get(i).getEgreso() : ((EditText)row.getChildAt(1)).getText().toString();
+                            String Tipo = (((EditText)row.getChildAt(2)).getText().toString().equals(""))? datos.get(i - 1).getTipo() : ((EditText)row.getChildAt(2)).getText().toString();
+                            String Descripcion = (((EditText)row.getChildAt(3)).getText().toString().equals(""))? datos.get(i - 1).getDescripcion() : ((EditText)row.getChildAt(3)).getText().toString();
+                            String Egreso = (((EditText)row.getChildAt(1)).getText().toString().equals(""))? datos.get(i - 1).getEgreso() : ((EditText)row.getChildAt(1)).getText().toString();
                             entidadCategoria a = new entidadCategoria(
                                     Tipo,
                                     Descripcion,
                                     Egreso, 0, 0);
                             a.id = Integer.parseInt(((EditText)row.getChildAt(0)).getText().toString());
-                            if(!categoria_existe(Descripcion))
+                            if((Descripcion.equals(datos.get(i-1).getDescripcion()) && categoria_existe(Descripcion)) || (!Descripcion.equals(datos.get(i - 1).getDescripcion()) && !categoria_existe(Descripcion)))
                                 ad.agregar_modificar_categoria(a,false,getActivity());
                             else
                                 Toast.makeText(getActivity(),"Error, categoria existente", Toast.LENGTH_SHORT).show();
+
+
                         }
                         catch (Exception e)
                         {
@@ -348,13 +350,13 @@ public class Categoria_egreso extends Fragment {
                     {
                         try
                         {
-                            if(datos.get(i).getMonto() != 0)
+                            if(datos.get(i - 1).getMonto() != 0)
                             {
                                 entidadCategoria a = new entidadCategoria(
                                         "",
                                         "",
                                         "", 0, 0);
-                                a.id = datos.get(i).id;
+                                a.id = datos.get(i - 1).id;
                                 if (ad.eliminar_categoria(a, getActivity()))
                                     Toast.makeText(getActivity(), "Éxito, datos eliminados", Toast.LENGTH_SHORT).show();
                                 else
