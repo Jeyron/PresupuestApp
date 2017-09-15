@@ -26,9 +26,30 @@
             android:id="@+id/registro_egreso_mensual"
             android:icon="@drawable/egreso_mensual"
             android:title="@string/registro_egreso_mensual" />
+    </group>
+
+    <group>
         <item
             android:id="@+id/reportes"
-            android:icon="@drawable/reportes"
-            android:title="@string/reportes" />
+            android:title="@string/reportes">
+            <menu>
+                <item
+                    android:id="@+id/btn_reporte_detalle_egreos"
+                    android:title="@string/reporte_detalle_egresos"
+                    android:icon="@drawable/reporte_1"/>
+                <item
+                    android:id="@+id/btn_reporte_balance_por_categoria"
+                    android:title="@string/reporte_Balance_categoría_egreso"
+                    android:icon="@drawable/reporte_2"/>
+                <item
+                    android:id="@+id/btn_reporte_porcentaje_egreos_x_categoria"
+                    android:title="@string/reporte_Porcentajes_egresos_categoría"
+                    android:icon="@drawable/reporte_3"/>
+                <item
+                    android:id="@+id/reporte_resumen_gastos_x_tarjeta"
+                    android:title="@string/reporte_Resumen_gastos_tarjeta"
+                    android:icon="@drawable/reporte_4"/>
+            </menu>
+        </item>
     </group>
 </menu>
