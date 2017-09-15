@@ -21,6 +21,10 @@
         <item>Gasto</item>
     </string-array>
 
+    <string-array name="hora">
+        <item>am</item>
+        <item>pm</item>
+    </string-array>
 
     <string-array name="tipo_Tarjeta">
         <item>Crédito</item>

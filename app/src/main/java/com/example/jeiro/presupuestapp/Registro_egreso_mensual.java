@@ -1,5 +1,6 @@
 package com.example.jeiro.presupuestapp;
 
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,7 +9,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.TextView;
 
+import java.util.Calendar;
 
 
 /**
@@ -28,6 +34,8 @@ public class Registro_egreso_mensual extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    TextView txt_fecha;
+    Button fecha_piker;
 
     private OnFragmentInteractionListener mListener;
 
@@ -66,8 +74,11 @@ public class Registro_egreso_mensual extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registro_egreso_mensual, container, false);
+
+        View viewroot = inflater.inflate(R.layout.fragment_registro_egreso_mensual, container, false);
+        return viewroot;
     }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -108,9 +119,9 @@ public class Registro_egreso_mensual extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    public void showDatePickerDialog(View v)
-    {
-        DialogFragment newFragmentDate = new Date_Picker();
-        newFragmentDate.show(getFragmentManager(),"Date Picker");
+
+    public void showDatePickerDialog(View v) {
+        DialogFragment newFragment = new DatePickerFragment();
+        newFragment.show(getActivity().getSupportFragmentManager(), "datePicker");
     }
 }

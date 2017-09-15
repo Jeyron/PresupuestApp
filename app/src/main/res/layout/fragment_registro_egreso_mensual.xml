@@ -49,16 +49,6 @@
                     android:layout_marginTop="24dp"
                     android:text="@string/Fecha" />
 
-                <EditText
-                    android:id="@+id/txt_fecha_egreso_mensual"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:layout_alignLeft="@+id/txt_hora_egreso_mensual"
-                    android:layout_alignStart="@+id/txt_hora_egreso_mensual"
-                    android:layout_marginRight="50dp"/>
 
                 <TextView
                     android:id="@+id/textView28"
@@ -66,22 +56,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/textView27"
                     android:layout_alignStart="@+id/textView27"
-                    android:layout_below="@+id/txt_fecha_egreso_mensual"
-                    android:layout_marginTop="26dp"
+                    android:layout_marginTop="76dp"
                     android:text="@string/Hora" />
-
-                <EditText
-                    android:id="@+id/txt_hora_egreso_mensual"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="55dp"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:layout_marginRight="50dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignLeft="@+id/spinner_categoria_egreso_mensual"
-                    android:layout_alignStart="@+id/spinner_categoria_egreso_mensual" />
 
                 <TextView
                     android:id="@+id/textView29"
@@ -89,8 +65,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/textView28"
                     android:layout_alignStart="@+id/textView28"
-                    android:layout_below="@+id/txt_hora_egreso_mensual"
-                    android:layout_marginTop="21dp"
+                    android:layout_marginTop="118dp"
                     android:text="@string/categoría_egreso" />
 
                 <Spinner
@@ -232,28 +207,100 @@
                     android:text="@string/Registrar"
                     android:textColor="@color/colorTexto" />
 
-                <Button
-                    android:id="@+id/btn_fecha"
-                    android:layout_width="50dp"
-                    android:onClick="showDatePickerDialog"
-                    android:layout_height="40dp"
-                    android:background="@drawable/btnpulsable"
-                    android:textColor="@color/colorTexto"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="7dp"
-                    android:text="..." />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignLeft="@+id/spinner_categoria_egreso_mensual"
+                    android:layout_alignStart="@+id/spinner_categoria_egreso_mensual"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    android:weightSum="3">
+                    <EditText
+                        android:id="@+id/txt_dia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="2" />
 
-                <Button
-                    android:id="@+id/btn_hora"
-                    android:layout_width="50dp"
-                    android:background="@drawable/btnpulsable"
-                    android:textColor="@color/colorTexto"
-                    android:layout_height="40dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="55dp"
-                    android:text="..." />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textSize="20dp"
+                        android:maxLength="2">
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/txt_mes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textSize="20dp"
+                        android:maxLength="2"/>
+
+                    <EditText
+                        android:id="@+id/txt_anno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="4" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignLeft="@+id/spinner_categoria_egreso_mensual"
+                    android:layout_alignStart="@+id/spinner_categoria_egreso_mensual"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="70dp"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/txt_dia2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:maxLength="2" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="2"
+                        android:text="/"
+                        android:textSize="20dp"></TextView>
+
+                    <EditText
+                        android:id="@+id/txt_mes2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:maxLength="3" />
+
+                    <Spinner
+                        android:id="@+id/spinner2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/hora"/>
+                </LinearLayout>
 
             </RelativeLayout>
         </ScrollView>
