@@ -382,7 +382,7 @@ public class Presupuesto_mensual extends Fragment {
             @Override
             public void onClick(View v){
                 EditText e = (EditText) viewroot.findViewById(R.id.txt_monto_prespuesto_mensual);
-                if (e.getText().length() != 0 && e.getText().equals("0"))
+                if (e.getText().length() != 0 && !e.getText().equals("0"))
                 {
                     try {
                         if (Navegacion.id_mes != 0 && e.isEnabled()) {

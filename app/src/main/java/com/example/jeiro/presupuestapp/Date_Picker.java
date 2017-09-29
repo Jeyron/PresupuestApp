@@ -30,13 +30,13 @@ public class Date_Picker extends DialogFragment implements DatePickerDialog.OnDa
 
     @Override
     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-        Calendar c = Calendar.getInstance();
+        /*Calendar c = Calendar.getInstance();
         c.set(year, month, day);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         String formattedDate = sdf.format(c.getTime());
         Toast.makeText(getActivity(),formattedDate,Toast.LENGTH_LONG).show();
         TextView activityButton = (TextView)getActivity().findViewById(R.id.txt_fecha_egreso_mensual);
-        activityButton.setText (formattedDate);
+        activityButton.setText (formattedDate);*/
     }
 
 

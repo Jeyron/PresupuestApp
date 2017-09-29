@@ -107,6 +107,12 @@ public class acceso_datos
                 db.insert(tablas_base_datos.tablaTarjeta.TABLE_NAME, null,c);
                 db.close();
             }
+            else
+            {
+                SQLiteDatabase db = helper.getWritableDatabase();
+                db.update(tablas_base_datos.tablaTarjeta.TABLE_NAME, c, "Numero=" + tarjeta.getNumero(), null);
+                db.close();
+            }
 
         }
         catch (Exception exc)
@@ -185,11 +191,14 @@ public class acceso_datos
         base_datos helper = new base_datos(context);
         try
         {
-
+            SQLiteDatabase db = helper.getWritableDatabase();
+            String whereClause = "Numero=?";
+            String[] whereArgs = new String[] { String.valueOf(tarjeta.getNumero() + "") };
+            db.delete(tablas_base_datos.tablaTarjeta.TABLE_NAME, whereClause, whereArgs);
         }
         catch (Exception exc)
         {
-
+            return false;
         }
         return true;
     }
@@ -317,6 +326,37 @@ public class acceso_datos
         catch (Exception exc)
         {
             return new ArrayList<entidadEgreso>();
+        }
+        return datos;
+    }
+
+    public ArrayList<entidadTarjeta> obtener_Tarjetas (Context context)
+    {
+        ArrayList datos = new ArrayList<entidadTarjeta>();
+        base_datos helper = new base_datos(context);
+        SQLiteDatabase db = helper.getReadableDatabase();
+        try
+        {
+            Cursor c = db.query(
+                    tablas_base_datos.tablaTarjeta.TABLE_NAME, // The table to query
+                    null, // The columns to return
+                    null, // The columns for the WHERE clause
+                    null, // The values for the WHERE clause
+                    null, // don't group the rows
+                    null, // don't filter by row groups
+                    null // The sort order
+            );
+            if(c.moveToFirst())
+                do
+                {
+                    entidadTarjeta a = new entidadTarjeta(c.getString(0), c.getString(1), c.getString(2), c.getString(3));
+                    datos.add(a);
+                } while(c.moveToNext());
+            db.close();
+        }
+        catch (Exception exc)
+        {
+            return new ArrayList<entidadTarjeta>();
         }
         return datos;
     }
